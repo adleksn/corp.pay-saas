@@ -37,3 +37,4 @@ grep -q '.site-header.is-menu-open {' styles.css
 sed -n '/\.site-header\.is-menu-open {/,/^  }/p' styles.css | grep -q 'background: transparent'
 sed -n '/\.mobile-menu__link {/,/^  }/p' styles.css | grep -q 'font-size: 16px'
 sed -n '/\.mobile-menu__link {/,/^  }/p' styles.css | grep -q 'white-space: nowrap'
+sed -n '/\.mobile-menu__plus {/,/^  }/p' styles.css | grep -q 'font-weight: 700'

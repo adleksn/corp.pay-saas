@@ -494,10 +494,13 @@ a {
   }
 
   .mobile-menu__plus {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-family: Arial, sans-serif;
     font-size: 24px;
-    font-weight: 400;
-    line-height: 16px;
+    font-weight: 700;
+    line-height: 1;
   }
 
   .mobile-menu__contacts {
