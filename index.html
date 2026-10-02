@@ -15,7 +15,7 @@
           <span class="brand__note">для бизнеса</span>
         </a>
 
-        <button class="menu-toggle" type="button" aria-label="Меню" aria-expanded="false" aria-controls="site-navigation">
+        <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
           <span class="menu-toggle__line"></span>
           <span class="menu-toggle__line"></span>
           <span class="menu-toggle__line"></span>
@@ -46,6 +46,38 @@
           </div>
         </div>
       </div>
+
+      <aside class="mobile-menu" id="mobile-menu" aria-label="Мобильное меню" hidden>
+        <nav class="mobile-menu__nav" aria-label="Навигация">
+          <a class="mobile-menu__link mobile-menu__link--expandable" href="#service-payments">
+            <span>Оплата сервисов</span>
+            <span class="mobile-menu__plus" aria-hidden="true">+</span>
+          </a>
+          <a class="mobile-menu__link mobile-menu__link--expandable" href="#transfers">
+            <span>Переводы</span>
+            <span class="mobile-menu__plus" aria-hidden="true">+</span>
+          </a>
+          <a class="mobile-menu__link" href="#reviews">Отзывы</a>
+          <a class="mobile-menu__link" href="contacts.html">Контакты</a>
+        </nav>
+
+        <div class="mobile-menu__contacts">
+          <a class="mobile-menu__phone" href="tel:88002007965">8 (800) 200-79-65</a>
+          <p class="mobile-menu__contact-title">Написать нам в:</p>
+          <ul class="mobile-menu__contact-list">
+            <li>Telegram</li>
+            <li>MAX</li>
+            <li>ВКонтакте</li>
+            <li>WhatsApp</li>
+          </ul>
+        </div>
+      </aside>
+
+      <button class="mobile-menu__close" type="button" aria-label="Закрыть меню" hidden>
+        <svg width="32" height="32" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <path d="m5 5 14 14M19 5 5 19"></path>
+        </svg>
+      </button>
     </header>
 
     <main></main>
