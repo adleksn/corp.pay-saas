@@ -24,6 +24,8 @@ grep -q 'font-family: Montserrat' styles.css
 grep -q 'font-family: "Roboto Mono"' styles.css
 grep -q 'font-family: rugon' styles.css
 grep -q 'aria-expanded="false"' index.html
+test -f assets/fonts/futura-pt-medium.ttf
+grep -q 'assets/fonts/futura-pt-medium.ttf' styles.css
 grep -q 'aria-controls="mobile-menu"' index.html
 grep -q 'id="mobile-menu"' index.html
 grep -q 'Оплата сервисов' index.html
