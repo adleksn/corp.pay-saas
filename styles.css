@@ -450,6 +450,10 @@ a {
     background: var(--color-background);
   }
 
+  .site-header.is-menu-open .site-header__content {
+    display: flex;
+  }
+
   .site-nav,
   .site-header__actions {
     flex-direction: column;

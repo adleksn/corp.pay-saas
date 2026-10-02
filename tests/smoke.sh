@@ -23,4 +23,7 @@ grep -q 'font-family: Inter' styles.css
 grep -q 'font-family: Montserrat' styles.css
 grep -q 'font-family: "Roboto Mono"' styles.css
 grep -q 'font-family: rugon' styles.css
-! grep -q 'is-menu-open' script.js
+grep -q 'aria-expanded="false"' index.html
+grep -q 'aria-controls="site-navigation"' index.html
+grep -q "classList.toggle('is-menu-open')" script.js
+grep -q '.site-header.is-menu-open .site-header__content' styles.css
