@@ -73,5 +73,6 @@ grep -q 'Оплата зарубежных сервисов' index.html
 grep -q 'API нейросетей по безналу' index.html
 grep -q 'Зарубежные платежи' index.html
 grep -q 'service-card__more' index.html
+grep -q 'M12 5v14M6 13l6 6 6-6' index.html
 grep -q "classList.toggle('is-active'" script.js
 grep -q '^\.service-card.is-active' styles.css
