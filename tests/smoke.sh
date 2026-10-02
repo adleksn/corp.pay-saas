@@ -58,6 +58,7 @@ sed -n '/\.mobile-menu__link {/,/^  }/p' styles.css | grep -q 'white-space: nowr
 sed -n '/\.mobile-menu__plus {/,/^  }/p' styles.css | grep -q 'font-weight: 700'
 grep -q '^\.hero {' styles.css
 grep -q '^  \.hero {' styles.css
+sed -n '/\.hero__benefits {/,/^}/p' styles.css | grep -q 'gap: 12px 0px'
 sed -n '/\.hero__operator {/,/^}/p' styles.css | grep -q 'padding: 11px 31px'
 grep -q '^\.hero__operator:hover' styles.css
 grep -q '^\.hero__email:hover' styles.css
