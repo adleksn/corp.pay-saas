@@ -149,13 +149,12 @@ a {
   letter-spacing: 0.21px;
   line-height: 1.22;
   text-transform: uppercase;
-  transition: color var(--transition-base), background-color var(--transition-base);
+  transition: color var(--transition-base);
 }
 
 .site-nav__link:hover,
 .site-nav__link:focus-visible {
-  color: #ffffff;
-  background-color: var(--color-primary);
+  color: #5f1660;
   outline: none;
 }
 
