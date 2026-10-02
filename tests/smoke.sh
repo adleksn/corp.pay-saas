@@ -42,6 +42,11 @@ grep -q 'id="mobile-menu"' index.html
 grep -q 'Оплата сервисов' index.html
 grep -q '8 (800) 200-79-65' index.html
 grep -q 'mobile-menu__close' index.html
+grep -q 'class="hero"' index.html
+grep -q 'Зарубежные сервисы' index.html
+grep -q 'и платежи для вашего бизнеса' index.html
+grep -q 'class="hero__benefits"' index.html
+grep -q 'class="hero__cta"' index.html
 grep -q "classList.toggle('is-menu-open'" script.js
 grep -q '.site-header.is-menu-open .mobile-menu' styles.css
 grep -q '.site-header.is-menu-open .menu-toggle' styles.css
@@ -51,3 +56,5 @@ sed -n '/\.site-header\.is-menu-open {/,/^  }/p' styles.css | grep -q 'backgroun
 sed -n '/\.mobile-menu__link {/,/^  }/p' styles.css | grep -q 'font-size: 16px'
 sed -n '/\.mobile-menu__link {/,/^  }/p' styles.css | grep -q 'white-space: nowrap'
 sed -n '/\.mobile-menu__plus {/,/^  }/p' styles.css | grep -q 'font-weight: 700'
+grep -q '^\.hero {' styles.css
+grep -q '^  \.hero {' styles.css
