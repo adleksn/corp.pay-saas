@@ -60,6 +60,7 @@ sed -n '/\.mobile-menu__plus {/,/^  }/p' styles.css | grep -q 'font-weight: 700'
 grep -q '^\.hero {' styles.css
 grep -q '^  \.hero {' styles.css
 sed -n '/\.hero__benefits {/,/^}/p' styles.css | grep -q 'gap: 12px 0px'
+if sed -n '/^  \.hero__benefit {/,/^  }/p' styles.css | grep -q 'min-height'; then exit 1; fi
 sed -n '/\.hero__operator {/,/^}/p' styles.css | grep -q 'padding: 11px 31px'
 sed -n '/\.hero__operator {/,/^}/p' styles.css | grep -q 'font-family: "Futura PT Book"'
 sed -n '/\.button--primary {/,/^}/p' styles.css | grep -q 'font-family: "Futura PT Book"'
