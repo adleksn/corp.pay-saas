@@ -21,6 +21,7 @@ grep -q -- '--color-primary' styles.css
 ! sed -n '/\.site-nav__link:hover,/,/^}/p' styles.css | grep -q 'background-color'
 grep -q 'font-family: Inter' styles.css
 grep -q 'font-family: Montserrat' styles.css
+sed -n '/font-family: Montserrat;/,/^}/p' styles.css | grep -q 'font-weight: 100 900'
 grep -q 'font-family: "Roboto Mono"' styles.css
 grep -q 'font-family: rugon' styles.css
 grep -q 'aria-expanded="false"' index.html

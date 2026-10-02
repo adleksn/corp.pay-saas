@@ -187,6 +187,7 @@
 @font-face {
   font-family: Montserrat;
   src: url("assets/fonts/montserrat.ttf") format("truetype");
+  font-weight: 100 900;
   font-display: swap;
 }
 
