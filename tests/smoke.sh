@@ -33,3 +33,7 @@ grep -q "classList.toggle('is-menu-open'" script.js
 grep -q '.site-header.is-menu-open .mobile-menu' styles.css
 grep -q '.site-header.is-menu-open .menu-toggle' styles.css
 grep -q 'width: 64%' styles.css
+grep -q '.site-header.is-menu-open {' styles.css
+sed -n '/\.site-header\.is-menu-open {/,/^  }/p' styles.css | grep -q 'background: transparent'
+sed -n '/\.mobile-menu__link {/,/^  }/p' styles.css | grep -q 'font-size: 16px'
+sed -n '/\.mobile-menu__link {/,/^  }/p' styles.css | grep -q 'white-space: nowrap'
