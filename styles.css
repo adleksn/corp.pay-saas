@@ -312,6 +312,7 @@ a {
   display: inline-flex;
   flex: 0 0 auto;
   align-items: center;
+  padding: 0 15px;
 }
 
 .brand__logo {
@@ -334,8 +335,9 @@ a {
 .site-header__content {
   display: flex;
   align-items: center;
-  gap: 40px;
-  margin-left: 50px;
+  gap: 0;
+  padding: 0 15px;
+  margin-left: auto;
 }
 
 .site-nav,
@@ -345,11 +347,11 @@ a {
 }
 
 .site-nav {
-  gap: 20px;
+  gap: 6px;
 }
 
 .site-nav__link {
-  padding: 8px 0;
+  padding: 8px 14px;
   border-radius: var(--radius-md);
   color: var(--color-primary);
   font-family: "Futura PT Demi", "Futura PT", Arial, sans-serif;
@@ -368,7 +370,9 @@ a {
 }
 
 .site-header__actions {
+  width: 324px;
   gap: 10px;
+  justify-content: flex-end;
 }
 
 .button,
@@ -451,12 +455,12 @@ a {
 
 @media (max-width: 1180px) {
   .site-header__content {
-    gap: 16px;
+    gap: 0;
   }
 
   .site-nav__link {
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: 14px;
+    padding-left: 14px;
     font-size: 16px;
   }
 }
@@ -469,6 +473,10 @@ a {
   .site-header {
     padding: 6px var(--container-padding);
     border-bottom: 1px solid var(--color-border);
+  }
+
+  .brand {
+    padding: 0;
   }
 
   .menu-toggle {

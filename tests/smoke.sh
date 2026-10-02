@@ -34,8 +34,8 @@ test -f assets/fonts/futura-pt-bold.ttf
 test -f assets/fonts/futura-pt-heavy.ttf
 grep -q 'assets/fonts/futura-pt-demi.ttf' styles.css
 sed -n '/\.brand__logo {/,/^}/p' styles.css | grep -q 'height: 61px'
-sed -n '/\.site-header__content {/,/^}/p' styles.css | grep -q 'margin-left: 50px'
-sed -n '/\.site-nav {/,/^}/p' styles.css | grep -q 'gap: 20px'
+sed -n '/\.site-header__content {/,/^}/p' styles.css | grep -q 'margin-left: auto'
+sed -n '/\.site-nav {/,/^}/p' styles.css | grep -q 'gap: 6px'
 sed -n '/\.button {/,/^}/p' styles.css | grep -q 'justify-content: flex-start'
 grep -q 'aria-controls="mobile-menu"' index.html
 grep -q 'id="mobile-menu"' index.html
