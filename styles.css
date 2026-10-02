@@ -1849,6 +1849,7 @@ a {
   .commission__dots > .is-active,
   .foreign-payments__dots > .is-active {
     width: 18px;
+    border-radius: 50%;
     background: #a32a8d;
   }
 
