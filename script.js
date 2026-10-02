@@ -27,6 +27,37 @@ const serviceCards = document.querySelectorAll('[data-service-card]');
 const servicePayments = document.querySelector('#service-payments');
 const apiNeuralNetworks = document.querySelector('#api-neural-networks');
 const foreignPayments = document.querySelector('#foreign-payments');
+const scrollDotsUpdaters = [];
+
+const setupScrollDots = (scrollerSelector, dotsSelector, itemSelector) => {
+  const scroller = document.querySelector(scrollerSelector);
+  const dots = Array.from(document.querySelectorAll(`${dotsSelector} > *`));
+  const items = scroller ? Array.from(scroller.querySelectorAll(itemSelector)) : [];
+
+  if (!scroller || !dots.length || dots.length !== items.length) {
+    return;
+  }
+
+  const updateDots = () => {
+    const currentIndex = items.reduce((closestIndex, item, index) => {
+      const currentDistance = Math.abs(item.offsetLeft - scroller.offsetLeft - scroller.scrollLeft - 16);
+      const closestDistance = Math.abs(items[closestIndex].offsetLeft - scroller.offsetLeft - scroller.scrollLeft - 16);
+
+      return currentDistance < closestDistance ? index : closestIndex;
+    }, 0);
+
+    dots.forEach((dot, index) => {
+      const isActive = index === currentIndex;
+      dot.classList.toggle('is-active', isActive);
+      dot.classList.toggle('is-inactive', !isActive);
+    });
+  };
+
+  scroller.addEventListener('scroll', updateDots, { passive: true });
+  window.addEventListener('resize', updateDots);
+  scrollDotsUpdaters.push(updateDots);
+  updateDots();
+};
 
 const setServicePaymentsVisibility = (activeCard) => {
   if (!servicePayments) {
@@ -62,6 +93,7 @@ const setActiveServiceCard = (nextCard) => {
   setServicePaymentsVisibility(nextCard);
   setApiNeuralNetworksVisibility(nextCard);
   setForeignPaymentsVisibility(nextCard);
+  scrollDotsUpdaters.forEach((updateDots) => updateDots());
 };
 
 const activeServiceCard = document.querySelector('[data-service-card].is-active');
@@ -88,3 +120,8 @@ serviceCards.forEach((card) => {
     setActiveServiceCard(card);
   });
 });
+
+setupScrollDots('.services__list', '.services__dots', '.service-card');
+setupScrollDots('.api-benefits', '.api-benefits__dots', '.api-benefit');
+setupScrollDots('.commission-tiers', '.commission__dots', '.commission-tier');
+setupScrollDots('.foreign-payments__cards', '.foreign-payments__dots', '.foreign-payment-card');

@@ -671,6 +671,10 @@ a {
   gap: 24px;
 }
 
+.services__dots {
+  display: none;
+}
+
 .service-card {
   display: flex;
   flex: 1 1 0;
@@ -1563,6 +1567,23 @@ a {
     display: none;
   }
 
+  .services__dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  .services__dots span,
+  .services__dots i {
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: var(--color-border);
+  }
+
   .service-card {
     flex: 0 0 300px;
     justify-content: flex-start;
@@ -1821,6 +1842,22 @@ a {
   .api-benefits__dots span {
     width: 18px;
     background: #a32a8d;
+  }
+
+  .services__dots > .is-active,
+  .api-benefits__dots > .is-active,
+  .commission__dots > .is-active,
+  .foreign-payments__dots > .is-active {
+    width: 18px;
+    background: #a32a8d;
+  }
+
+  .services__dots > .is-inactive,
+  .api-benefits__dots > .is-inactive,
+  .commission__dots > .is-inactive,
+  .foreign-payments__dots > .is-inactive {
+    width: 6px;
+    background: var(--color-border);
   }
 
   .api-steps {
