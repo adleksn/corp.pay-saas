@@ -198,6 +198,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Futura PT Demi";
+  src: url("assets/fonts/futura-pt-demi-oblique.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+}
+
 :root {
   --color-primary: #741b75;
   --color-background: #ffffff;
