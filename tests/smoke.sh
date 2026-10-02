@@ -90,3 +90,8 @@ grep -q 'class="api-benefits"' index.html
 grep -q 'class="api-steps"' index.html
 grep -q 'setApiNeuralNetworksVisibility' script.js
 grep -q '^\.api-neural-networks {' styles.css
+grep -q 'id="foreign-payments"' index.html
+grep -q 'Платежи с зарубежными контрагентами' index.html
+grep -q 'class="foreign-payments__cards"' index.html
+grep -q 'setForeignPaymentsVisibility' script.js
+grep -q '^\.foreign-payments {' styles.css

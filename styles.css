@@ -1132,6 +1132,171 @@ a {
   stroke-linejoin: round;
 }
 
+.foreign-payments {
+  padding: 88px 0;
+  background: #ffffff;
+}
+
+.foreign-payments__inner {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  max-width: calc(100% - 64px);
+  margin: 0 auto;
+  gap: 56px;
+}
+
+.foreign-payments__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.foreign-payments__heading h2,
+.foreign-payments__heading p,
+.foreign-payment-card h3,
+.foreign-payment-card p,
+.foreign-payments__footer p {
+  margin: 0;
+}
+
+.foreign-payments__heading h2 {
+  color: var(--color-text);
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.foreign-payments__heading > p:last-child {
+  width: 800px;
+  max-width: 100%;
+  color: var(--color-text-muted);
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.foreign-payments__cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.foreign-payment-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 224px;
+  padding: 28px;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  background: #ffffff;
+}
+
+.foreign-payment-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  color: #a32a8d;
+  background: #f8f6fa;
+}
+
+.foreign-payment-card__icon svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.foreign-payment-card h3 {
+  color: var(--color-text);
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.foreign-payment-card p {
+  color: var(--color-text-muted);
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.foreign-payment-card strong {
+  margin-top: auto;
+  color: var(--color-text-muted);
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.foreign-payments__dots {
+  display: none;
+}
+
+.foreign-payments__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.foreign-payments__footer p {
+  width: 800px;
+  max-width: 100%;
+  color: var(--color-text-muted);
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.foreign-payments__operator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 31px;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  color: #ffffff;
+  font-family: "Futura PT", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.21px;
+  line-height: 1.5;
+  background: var(--color-primary);
+  transition: background-color var(--transition-base);
+}
+
+.foreign-payments__operator:hover,
+.foreign-payments__operator:focus-visible {
+  background: #68186a;
+  outline: none;
+}
+
+.foreign-payments__operator svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 @media (max-width: 1180px) {
   .site-header__content {
     gap: 0;
@@ -1683,6 +1848,105 @@ a {
   }
 
   .api-neural-networks__operator {
+    width: 100%;
+    height: 52px;
+    padding: 0;
+  }
+
+  .foreign-payments {
+    padding: 56px 0;
+  }
+
+  .foreign-payments__inner {
+    width: 100%;
+    max-width: none;
+    gap: 32px;
+  }
+
+  .foreign-payments__heading {
+    gap: 8px;
+    padding: 0 16px;
+  }
+
+  .foreign-payments__heading h2 {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+
+  .foreign-payments__heading > p:last-child {
+    font-size: 14px;
+  }
+
+  .foreign-payments__cards {
+    display: flex;
+    gap: 12px;
+    padding: 0 16px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .foreign-payments__cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .foreign-payment-card {
+    flex: 0 0 280px;
+    min-height: 0;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .foreign-payment-card__icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+
+  .foreign-payment-card__icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .foreign-payment-card h3 {
+    font-size: 17px;
+    line-height: normal;
+  }
+
+  .foreign-payment-card p {
+    font-size: 14px;
+  }
+
+  .foreign-payments__dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .foreign-payments__dots span,
+  .foreign-payments__dots i {
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: var(--color-border);
+  }
+
+  .foreign-payments__dots span {
+    width: 18px;
+    background: #a32a8d;
+  }
+
+  .foreign-payments__footer {
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .foreign-payments__footer p {
+    font-size: 13px;
+  }
+
+  .foreign-payments__operator {
     width: 100%;
     height: 52px;
     padding: 0;
