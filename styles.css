@@ -1192,6 +1192,10 @@ a {
   gap: 24px;
 }
 
+.foreign-payments__cards-group {
+  display: contents;
+}
+
 .foreign-payment-card {
   display: flex;
   flex-direction: column;
@@ -1935,6 +1939,12 @@ a {
     padding: 0 16px;
     overflow-x: auto;
     scrollbar-width: none;
+  }
+
+  .foreign-payments__cards-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 
   .foreign-payments__cards::-webkit-scrollbar {
