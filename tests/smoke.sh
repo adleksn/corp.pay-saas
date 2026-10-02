@@ -28,6 +28,9 @@ test -f assets/fonts/futura-pt-medium.ttf
 grep -q 'assets/fonts/futura-pt-medium.ttf' styles.css
 test -f assets/fonts/futura-pt-demi-oblique.ttf
 grep -q 'assets/fonts/futura-pt-demi-oblique.ttf' styles.css
+sed -n '/\.site-header__content {/,/^}/p' styles.css | grep -q 'margin-left: 50px'
+sed -n '/\.site-nav {/,/^}/p' styles.css | grep -q 'gap: 20px'
+sed -n '/\.button {/,/^}/p' styles.css | grep -q 'justify-content: flex-start'
 grep -q 'aria-controls="mobile-menu"' index.html
 grep -q 'id="mobile-menu"' index.html
 grep -q 'Оплата сервисов' index.html
