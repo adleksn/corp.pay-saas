@@ -1006,6 +1006,10 @@ a {
   gap: 20px;
 }
 
+.api-benefits-group {
+  display: contents;
+}
+
 .api-benefit {
   display: flex;
   flex-direction: column;
@@ -1758,6 +1762,12 @@ a {
     padding: 0 16px;
     overflow-x: auto;
     scrollbar-width: none;
+  }
+
+  .api-benefits-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 
   .api-benefits::-webkit-scrollbar {

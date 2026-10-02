@@ -95,3 +95,5 @@ grep -q 'Платежи с зарубежными контрагентами' in
 grep -q 'class="foreign-payments__cards"' index.html
 grep -q 'setForeignPaymentsVisibility' script.js
 grep -q '^\.foreign-payments {' styles.css
+grep -q 'class="api-benefits-group"' index.html
+grep -q '^\.api-benefits-group {' styles.css
