@@ -24,6 +24,15 @@ if (header && menuToggle && mobileMenu && menuClose) {
 }
 
 const serviceCards = document.querySelectorAll('[data-service-card]');
+const servicePayments = document.querySelector('#service-payments');
+
+const setServicePaymentsVisibility = (activeCard) => {
+  if (!servicePayments) {
+    return;
+  }
+
+  servicePayments.hidden = activeCard?.dataset.serviceCard !== 'payments';
+};
 
 const setActiveServiceCard = (nextCard) => {
   serviceCards.forEach((card) => {
@@ -31,7 +40,11 @@ const setActiveServiceCard = (nextCard) => {
     card.classList.toggle('is-active', isActive);
     card.setAttribute('aria-pressed', String(isActive));
   });
+
+  setServicePaymentsVisibility(nextCard);
 };
+
+setServicePaymentsVisibility(document.querySelector('[data-service-card].is-active'));
 
 serviceCards.forEach((card) => {
   card.addEventListener('click', (event) => {
