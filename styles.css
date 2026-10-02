@@ -588,7 +588,7 @@ a {
   justify-content: center;
   gap: 10px;
   min-width: 224px;
-  padding: 13px 31px;
+  padding: 11px 31px;
   border: 1px solid var(--color-primary);
   border-radius: var(--radius-md);
   color: #ffffff;
@@ -598,6 +598,7 @@ a {
   letter-spacing: 0.21px;
   line-height: 1.5;
   background: var(--color-primary);
+  transition: background-color var(--transition-base);
 }
 
 .hero__operator svg,
@@ -618,6 +619,19 @@ a {
   font-family: Montserrat, Arial, sans-serif;
   font-size: 15px;
   font-weight: 600;
+  transition: color var(--transition-base);
+}
+
+.hero__operator:hover,
+.hero__operator:focus-visible {
+  background: #68186a;
+  outline: none;
+}
+
+.hero__email:hover,
+.hero__email:focus-visible {
+  color: #ffffff;
+  outline: none;
 }
 
 .hero__cta > p {
