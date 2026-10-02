@@ -67,3 +67,11 @@ sed -n '/\.hero__operator {/,/^}/p' styles.css | grep -q 'font-family: "Futura P
 sed -n '/\.button--primary {/,/^}/p' styles.css | grep -q 'font-family: "Futura PT Book"'
 grep -q '^\.hero__operator:hover' styles.css
 grep -q '^\.hero__email:hover' styles.css
+grep -q '<section class="services"' index.html
+grep -q 'data-service-card' index.html
+grep -q 'Оплата зарубежных сервисов' index.html
+grep -q 'API нейросетей по безналу' index.html
+grep -q 'Зарубежные платежи' index.html
+grep -q 'service-card__more' index.html
+grep -q "classList.toggle('is-active'" script.js
+grep -q '^\.service-card.is-active' styles.css

@@ -22,3 +22,32 @@ if (header && menuToggle && mobileMenu && menuClose) {
 
   menuClose.addEventListener('click', () => setMenuState(false));
 }
+
+const serviceCards = document.querySelectorAll('[data-service-card]');
+
+const setActiveServiceCard = (nextCard) => {
+  serviceCards.forEach((card) => {
+    const isActive = card === nextCard;
+    card.classList.toggle('is-active', isActive);
+    card.setAttribute('aria-pressed', String(isActive));
+  });
+};
+
+serviceCards.forEach((card) => {
+  card.addEventListener('click', (event) => {
+    if (event.target.closest('.service-card__more')) {
+      return;
+    }
+
+    setActiveServiceCard(card);
+  });
+
+  card.addEventListener('keydown', (event) => {
+    if (event.key !== 'Enter' && event.key !== ' ') {
+      return;
+    }
+
+    event.preventDefault();
+    setActiveServiceCard(card);
+  });
+});
