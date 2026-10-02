@@ -61,5 +61,7 @@ grep -q '^\.hero {' styles.css
 grep -q '^  \.hero {' styles.css
 sed -n '/\.hero__benefits {/,/^}/p' styles.css | grep -q 'gap: 12px 0px'
 sed -n '/\.hero__operator {/,/^}/p' styles.css | grep -q 'padding: 11px 31px'
+sed -n '/\.hero__operator {/,/^}/p' styles.css | grep -q 'font-family: "Futura PT Book"'
+sed -n '/\.button--primary {/,/^}/p' styles.css | grep -q 'font-family: "Futura PT Book"'
 grep -q '^\.hero__operator:hover' styles.css
 grep -q '^\.hero__email:hover' styles.css
