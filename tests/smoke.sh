@@ -8,9 +8,19 @@ test -f styles.css
 test -f script.js
 test -f assets/images/header-logo.webp
 test -f assets/fonts/caveat-semibold.ttf
+test -f assets/fonts/8fb415819784353d.woff
+test -f assets/fonts/fe151a33b3b076d1.woff
+test -f assets/fonts/inter.ttf
+test -f assets/fonts/montserrat.ttf
+test -f assets/fonts/roboto-mono.ttf
 
 grep -q 'styles.css' index.html
 grep -q 'script.js' index.html
 grep -q '<header class="site-header"' index.html
 grep -q -- '--color-primary' styles.css
 ! sed -n '/\.site-nav__link:hover,/,/^}/p' styles.css | grep -q 'background-color'
+grep -q 'font-family: Inter' styles.css
+grep -q 'font-family: Montserrat' styles.css
+grep -q 'font-family: "Roboto Mono"' styles.css
+grep -q 'font-family: rugon' styles.css
+! grep -q 'is-menu-open' script.js

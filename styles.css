@@ -7,10 +7,186 @@
 }
 
 @font-face {
+  font-family: CBKMultiIcon;
+  src: url("assets/fonts/9da74fb290a798fa.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: CBKOpenSans;
+  src: url("assets/fonts/87d988c2f0343952.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: CBKRobotoLight;
+  src: url("assets/fonts/60bf10124809f12b.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: CBKRobotoRegular;
+  src: url("assets/fonts/c729757be40622e3.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: CBKRobotoThin;
+  src: url("assets/fonts/6036ca46a9f0a9d7.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Brands";
+  src: url("assets/fonts/f726c4275bb494a0.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  src: url("assets/fonts/fb9648469530a05f.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  src: url("assets/fonts/9b592048b9062b00.woff2") format("woff2");
+  font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Futura PT";
   src: local("Futura PT Medium"), local("FuturaPT-Medium");
   font-style: normal;
   font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Book";
+  src: url("assets/fonts/8fb415819784353d.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Book";
+  src: url("assets/fonts/4854387f25c50d64.woff") format("woff");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Cond";
+  src: url("assets/fonts/fd42b527293d00d7.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Cond";
+  src: url("assets/fonts/5cfa68ac8a7cdb68.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Cond";
+  src: url("assets/fonts/58d8452363588dac.woff") format("woff");
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Cond";
+  src: url("assets/fonts/6a754157a04a4e81.woff") format("woff");
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Cond Book";
+  src: url("assets/fonts/2d590ede5fd1513b.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Cond Book";
+  src: url("assets/fonts/46972b1b15b20960.woff") format("woff");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Cond Extra";
+  src: url("assets/fonts/39b408591316dd7a.woff") format("woff");
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Cond Extra";
+  src: url("assets/fonts/4a99b0c0396036a1.woff") format("woff");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Extra";
+  src: url("assets/fonts/ba3769bd5b902072.woff") format("woff");
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT Extra";
+  src: url("assets/fonts/18b780cdfb8dd206.woff") format("woff");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("assets/fonts/inter.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("assets/fonts/montserrat.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("assets/fonts/roboto-mono.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: rugon;
+  src: url("assets/fonts/fe151a33b3b076d1.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Times New Roman";
+  src: url("assets/fonts/e763030b5cd2cc5a.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: whitesaas;
+  src: url("assets/fonts/2e862f290597a99f.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -272,22 +448,6 @@ a {
     padding: 16px;
     border-bottom: 1px solid var(--color-border);
     background: var(--color-background);
-  }
-
-  .site-header.is-menu-open .site-header__content {
-    display: flex;
-  }
-
-  .site-header.is-menu-open .menu-toggle__line:nth-child(2) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .site-header.is-menu-open .menu-toggle__line:nth-child(3) {
-    opacity: 0;
-  }
-
-  .site-header.is-menu-open .menu-toggle__line:nth-child(4) {
-    transform: translateY(-8px) rotate(-45deg);
   }
 
   .site-nav,
