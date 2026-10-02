@@ -25,6 +25,7 @@ if (header && menuToggle && mobileMenu && menuClose) {
 
 const serviceCards = document.querySelectorAll('[data-service-card]');
 const servicePayments = document.querySelector('#service-payments');
+const apiNeuralNetworks = document.querySelector('#api-neural-networks');
 
 const setServicePaymentsVisibility = (activeCard) => {
   if (!servicePayments) {
@@ -32,6 +33,14 @@ const setServicePaymentsVisibility = (activeCard) => {
   }
 
   servicePayments.hidden = activeCard?.dataset.serviceCard !== 'payments';
+};
+
+const setApiNeuralNetworksVisibility = (activeCard) => {
+  if (!apiNeuralNetworks) {
+    return;
+  }
+
+  apiNeuralNetworks.hidden = activeCard?.dataset.serviceCard !== 'api';
 };
 
 const setActiveServiceCard = (nextCard) => {
@@ -42,9 +51,13 @@ const setActiveServiceCard = (nextCard) => {
   });
 
   setServicePaymentsVisibility(nextCard);
+  setApiNeuralNetworksVisibility(nextCard);
 };
 
-setServicePaymentsVisibility(document.querySelector('[data-service-card].is-active'));
+const activeServiceCard = document.querySelector('[data-service-card].is-active');
+
+setServicePaymentsVisibility(activeServiceCard);
+setApiNeuralNetworksVisibility(activeServiceCard);
 
 serviceCards.forEach((card) => {
   card.addEventListener('click', (event) => {

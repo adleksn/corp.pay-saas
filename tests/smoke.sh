@@ -84,3 +84,9 @@ grep -q 'class="service-steps"' index.html
 grep -q 'class="commission-tiers"' index.html
 grep -q 'setServicePaymentsVisibility' script.js
 grep -q '^\.service-payments {' styles.css
+grep -q 'id="api-neural-networks"' index.html
+grep -q 'Все современные модели' index.html
+grep -q 'class="api-benefits"' index.html
+grep -q 'class="api-steps"' index.html
+grep -q 'setApiNeuralNetworksVisibility' script.js
+grep -q '^\.api-neural-networks {' styles.css
