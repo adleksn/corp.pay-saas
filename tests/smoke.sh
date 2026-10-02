@@ -28,6 +28,11 @@ test -f assets/fonts/futura-pt-medium.ttf
 grep -q 'assets/fonts/futura-pt-medium.ttf' styles.css
 test -f assets/fonts/futura-pt-demi-oblique.ttf
 grep -q 'assets/fonts/futura-pt-demi-oblique.ttf' styles.css
+test -f assets/fonts/futura-pt-light.ttf
+test -f assets/fonts/futura-pt-demi.ttf
+test -f assets/fonts/futura-pt-bold.ttf
+test -f assets/fonts/futura-pt-heavy.ttf
+grep -q 'assets/fonts/futura-pt-demi.ttf' styles.css
 sed -n '/\.brand__logo {/,/^}/p' styles.css | grep -q 'height: 61px'
 sed -n '/\.site-header__content {/,/^}/p' styles.css | grep -q 'margin-left: 50px'
 sed -n '/\.site-nav {/,/^}/p' styles.css | grep -q 'gap: 20px'
