@@ -690,7 +690,7 @@ a {
 .service-card.is-active {
   padding: 27px;
   border: 2px solid #a32a8d;
-  box-shadow: 0 10px 30px rgb(163 42 141 / 15%);
+  box-shadow: 0 6px 18px rgb(163 42 141 / 10%);
 }
 
 .service-card:not(.is-active):hover {

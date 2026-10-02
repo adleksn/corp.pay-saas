@@ -76,6 +76,7 @@ grep -q 'service-card__more' index.html
 grep -q 'M12 5v14M6 13l6 6 6-6' index.html
 grep -q "classList.toggle('is-active'" script.js
 grep -q '^\.service-card.is-active' styles.css
+sed -n '/^\.service-card.is-active {/,/^}/p' styles.css | grep -q 'box-shadow: 0 6px 18px rgb(163 42 141 / 10%)'
 grep -q 'id="service-payments"' index.html
 grep -q 'Зарубежные сервисы и подписки' index.html
 grep -q 'Комиссия снижается с ежемесячным объёмом' index.html
