@@ -292,11 +292,12 @@ a {
 
 .brand__logo {
   width: 140px;
-  height: 62px;
+  height: 61px;
   object-fit: fill;
 }
 
 .brand__note {
+  align-self: center;
   margin-left: -22px;
   color: var(--color-primary);
   font-family: Caveat, cursive;
