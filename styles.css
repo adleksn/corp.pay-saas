@@ -1515,6 +1515,10 @@ a {
   font-family: Montserrat, Arial, sans-serif;
 }
 
+.trust-card__mobile-copy {
+  display: none;
+}
+
 .trust-card h3 {
   color: #2b1b3d;
   font-size: 18px;
@@ -2798,6 +2802,14 @@ a {
   .trust-card h3 {
     font-size: 14px;
     line-height: 1.25;
+  }
+
+  .trust-card__desktop-copy {
+    display: none;
+  }
+
+  .trust-card__mobile-copy {
+    display: inline;
   }
 
   .trust-card p {

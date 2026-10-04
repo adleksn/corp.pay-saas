@@ -128,5 +128,6 @@ grep -q 'reviewTabs' script.js
 grep -q 'class="trust"' index.html
 grep -q 'Почему нам можно доверять' index.html
 grep -q 'Работаем с 2022 года' index.html
+grep -q 'trust-card__mobile-copy' index.html
 grep -q '^\.trust {' styles.css
 grep -q '^  \.trust {' styles.css
