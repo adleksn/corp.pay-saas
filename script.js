@@ -129,10 +129,46 @@ setupScrollDots('.foreign-payments__cards', '.foreign-payments__dots', '.foreign
 const serviceDirectoryLogos = document.querySelector('.service-directory__logos');
 
 if (serviceDirectoryLogos) {
+  const mobileBreakpoint = window.matchMedia('(max-width: 900px)');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let marqueeTimer;
+  let isMarqueePaused = false;
+
   const setInitialServiceDirectoryPosition = () => {
-    serviceDirectoryLogos.scrollLeft = window.innerWidth <= 900 ? 160 : 0;
+    serviceDirectoryLogos.scrollLeft = mobileBreakpoint.matches ? 160 : 0;
+  };
+
+  const startServiceDirectoryMarquee = () => {
+    window.clearInterval(marqueeTimer);
+
+    if (!mobileBreakpoint.matches || reducedMotion.matches) {
+      return;
+    }
+
+    marqueeTimer = window.setInterval(() => {
+      if (!isMarqueePaused) {
+        const maximumScroll = serviceDirectoryLogos.scrollWidth - serviceDirectoryLogos.clientWidth;
+        serviceDirectoryLogos.scrollLeft = serviceDirectoryLogos.scrollLeft >= maximumScroll
+          ? 0
+          : serviceDirectoryLogos.scrollLeft + 1;
+      }
+    }, 100);
+  };
+
+  const pauseMarquee = () => {
+    isMarqueePaused = true;
+  };
+
+  const resumeMarquee = () => {
+    isMarqueePaused = false;
   };
 
   window.addEventListener('resize', setInitialServiceDirectoryPosition);
+  window.addEventListener('resize', startServiceDirectoryMarquee);
+  serviceDirectoryLogos.addEventListener('pointerdown', pauseMarquee, { passive: true });
+  serviceDirectoryLogos.addEventListener('pointerup', resumeMarquee, { passive: true });
+  serviceDirectoryLogos.addEventListener('pointercancel', resumeMarquee, { passive: true });
+  serviceDirectoryLogos.addEventListener('pointerleave', resumeMarquee, { passive: true });
   requestAnimationFrame(setInitialServiceDirectoryPosition);
+  startServiceDirectoryMarquee();
 }

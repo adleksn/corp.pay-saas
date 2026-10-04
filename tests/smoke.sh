@@ -75,9 +75,12 @@ grep -q 'Комиссия снижается с ежемесячным объё�
 grep -q 'class="service-steps"' index.html
 grep -q 'class="commission-tiers"' index.html
 grep -q 'class="service-directory"' index.html
+grep -q 'id="service-directory"' index.html
 grep -q 'Проверить возможность' index.html
+grep -q 'M4 12h16M13 5l7 7-7 7' index.html
 test "$(find assets/images/services -maxdepth 1 -name '*.webp' | wc -l | tr -d ' ')" -eq 15
 grep -q '^\.service-directory {' styles.css
+grep -q 'startServiceDirectoryMarquee' script.js
 grep -q 'setServicePaymentsVisibility' script.js
 grep -q '^\.service-payments {' styles.css
 grep -q 'id="api-neural-networks"' index.html
