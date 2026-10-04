@@ -132,10 +132,13 @@ if (serviceDirectoryLogos) {
   const mobileBreakpoint = window.matchMedia('(max-width: 900px)');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let marqueeTimer;
+  let marqueePosition = 160;
   let isMarqueePaused = false;
 
   const setInitialServiceDirectoryPosition = () => {
-    serviceDirectoryLogos.scrollLeft = mobileBreakpoint.matches ? 160 : 0;
+    marqueePosition = mobileBreakpoint.matches ? 160 : 0;
+    serviceDirectoryLogos.scrollLeft = marqueePosition;
+    serviceDirectoryLogos.style.setProperty('--service-directory-marquee-offset', '0px');
   };
 
   const startServiceDirectoryMarquee = () => {
@@ -148,9 +151,14 @@ if (serviceDirectoryLogos) {
     marqueeTimer = window.setInterval(() => {
       if (!isMarqueePaused) {
         const maximumScroll = serviceDirectoryLogos.scrollWidth - serviceDirectoryLogos.clientWidth;
-        serviceDirectoryLogos.scrollLeft = serviceDirectoryLogos.scrollLeft >= maximumScroll
-          ? 0
-          : serviceDirectoryLogos.scrollLeft + 1;
+        marqueePosition = marqueePosition >= maximumScroll ? 0 : marqueePosition + 0.16;
+
+        const scrollPosition = Math.floor(marqueePosition);
+        serviceDirectoryLogos.scrollLeft = scrollPosition;
+        serviceDirectoryLogos.style.setProperty(
+          '--service-directory-marquee-offset',
+          `${marqueePosition - scrollPosition}px`,
+        );
       }
     }, 100);
   };
@@ -160,6 +168,7 @@ if (serviceDirectoryLogos) {
   };
 
   const resumeMarquee = () => {
+    marqueePosition = serviceDirectoryLogos.scrollLeft;
     isMarqueePaused = false;
   };
 

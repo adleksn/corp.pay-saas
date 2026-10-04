@@ -81,6 +81,8 @@ grep -q 'M4 12h16M13 5l7 7-7 7' index.html
 test "$(find assets/images/services -maxdepth 1 -name '*.webp' | wc -l | tr -d ' ')" -eq 15
 grep -q '^\.service-directory {' styles.css
 grep -q 'startServiceDirectoryMarquee' script.js
+grep -q -- '--service-directory-marquee-offset' styles.css
+grep -q 'marqueePosition' script.js
 grep -q 'setServicePaymentsVisibility' script.js
 grep -q '^\.service-payments {' styles.css
 grep -q 'id="api-neural-networks"' index.html

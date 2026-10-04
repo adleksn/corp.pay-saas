@@ -1690,6 +1690,7 @@ a {
   }
 
   .service-directory__logos {
+    --service-directory-marquee-offset: 0px;
     display: grid;
     grid-template-columns: 119px 170px 170px 170px 170px 145px 119px 170px;
     grid-template-rows: repeat(2, 44px);
@@ -1710,6 +1711,7 @@ a {
     width: auto;
     height: 44px;
     padding: 0;
+    transform: translateX(calc(-1 * var(--service-directory-marquee-offset)));
   }
 
   .service-directory__logo img {
@@ -1743,7 +1745,7 @@ a {
   .service-directory__logo:nth-child(15) { grid-column: 8; }
 
   .service-directory__logo:nth-child(n + 8) {
-    transform: translateX(70px);
+    transform: translateX(calc(70px - var(--service-directory-marquee-offset)));
   }
 
   .service-directory__action {
