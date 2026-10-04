@@ -116,6 +116,7 @@ grep -q 'Работаем с закупками и тендерами' index.htm
 grep -q 'Коммерческое предложение' index.html
 grep -q '^\.purchases {' styles.css
 grep -q '^  \.purchases {' styles.css
+sed -n '/^  \.purchases {/,/^  }/p' styles.css | grep -q 'height: auto'
 grep -q 'account-choice__dots > \*\.is-active' styles.css
 grep -q 'class="reviews"' index.html
 grep -q 'Из Яндекс и 2GIS' index.html

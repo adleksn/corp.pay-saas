@@ -2614,6 +2614,7 @@ a {
   }
 
   .purchases {
+    height: auto;
     min-height: 0;
     padding: 56px 16px;
   }
