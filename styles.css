@@ -1209,6 +1209,140 @@ a {
   text-align: center;
 }
 
+.purchases {
+  display: flex;
+  justify-content: center;
+  height: 642px;
+  padding: 88px 0 51px;
+  background: #f8f6fa;
+}
+
+.purchases__inner {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  max-width: calc(100% - 64px);
+  gap: 40px;
+}
+
+.purchases__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.purchases__heading h2,
+.purchases__heading p,
+.purchase-card h3,
+.purchase-card p {
+  margin: 0;
+}
+
+.purchases__heading h2 {
+  color: var(--color-text);
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.purchases__heading p {
+  width: 800px;
+  color: var(--color-text-muted);
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.purchases__cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.purchase-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 264px;
+  gap: 14px;
+  padding: 28px;
+  border-radius: 20px;
+  background: #ffffff;
+}
+
+.purchase-card__icon {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border-radius: 12px;
+  color: #a32a8d;
+  background: #f8f6fa;
+}
+
+.purchase-card__icon svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.purchase-card h3 {
+  color: var(--color-text);
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.purchase-card p {
+  color: var(--color-text-muted);
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.purchases__button {
+  display: inline-flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 31px;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  color: #ffffff;
+  font-family: "Futura PT", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.21px;
+  line-height: 1.5;
+  background: var(--color-primary);
+  transition: background-color var(--transition-base);
+}
+
+.purchases__button:hover,
+.purchases__button:focus-visible {
+  background: #68186a;
+  outline: none;
+}
+
+.purchases__button svg {
+  width: 20px;
+  height: 20px;
+  color: #cc5fce;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .api-neural-networks {
   padding: 88px 0;
   background: #ffffff;
@@ -2187,8 +2321,10 @@ a {
   }
 
   .account-choice__dots > *.is-active {
+    flex: 0 0 18px;
     width: 18px;
     background: #ffffff;
+    border-radius: 50%;
   }
 
   .account-choice__dots > *.is-inactive {
@@ -2289,6 +2425,73 @@ a {
   .work-schemes__note {
     font-size: 12px;
     line-height: normal;
+  }
+
+  .purchases {
+    min-height: 0;
+    padding: 56px 16px;
+  }
+
+  .purchases__inner {
+    width: 100%;
+    max-width: none;
+    gap: 20px;
+  }
+
+  .purchases__heading h2 {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+
+  .purchases__heading p {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .purchases__cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .purchase-card {
+    min-height: 0;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .purchase-card__icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+
+  .purchase-card__icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .purchase-card h3 {
+    font-size: 17px;
+    line-height: normal;
+  }
+
+  .purchase-card p {
+    font-size: 14px;
+  }
+
+  .purchases__button {
+    align-self: stretch;
+    height: 60px;
+    min-height: 60px;
+    gap: 8px;
+    padding: 8px 20px;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  .purchases__button span {
+    max-width: 220px;
   }
 
   @keyframes service-directory-first-row {

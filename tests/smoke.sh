@@ -111,3 +111,9 @@ grep -q '^\.work-schemes {' styles.css
 grep -q '^  \.work-schemes {' styles.css
 grep -q 'account-choice__mobile-title' index.html
 grep -q 'color: #ba5faa' styles.css
+grep -q 'class="purchases"' index.html
+grep -q 'Работаем с закупками и тендерами' index.html
+grep -q 'Коммерческое предложение' index.html
+grep -q '^\.purchases {' styles.css
+grep -q '^  \.purchases {' styles.css
+grep -q 'account-choice__dots > \*\.is-active' styles.css
