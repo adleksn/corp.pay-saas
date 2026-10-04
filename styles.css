@@ -7,84 +7,10 @@
 }
 
 @font-face {
-  font-family: CBKMultiIcon;
-  src: url("assets/fonts/9da74fb290a798fa.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: CBKOpenSans;
-  src: url("assets/fonts/87d988c2f0343952.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: CBKRobotoLight;
-  src: url("assets/fonts/60bf10124809f12b.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: CBKRobotoRegular;
-  src: url("assets/fonts/c729757be40622e3.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: CBKRobotoThin;
-  src: url("assets/fonts/6036ca46a9f0a9d7.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Font Awesome 5 Brands";
-  src: url("assets/fonts/f726c4275bb494a0.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Font Awesome 5 Free";
-  src: url("assets/fonts/fb9648469530a05f.woff2") format("woff2");
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Font Awesome 5 Free";
-  src: url("assets/fonts/9b592048b9062b00.woff2") format("woff2");
-  font-weight: 900;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Futura PT";
   src: url("assets/fonts/futura-pt-medium.ttf") format("truetype");
   font-style: normal;
   font-weight: 500;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Futura PT Light";
-  src: url("assets/fonts/futura-pt-light.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Futura PT Bold";
-  src: url("assets/fonts/futura-pt-bold.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Futura PT Heavy";
-  src: url("assets/fonts/futura-pt-heavy.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 800;
   font-display: swap;
 }
 
@@ -96,95 +22,6 @@
 }
 
 @font-face {
-  font-family: "Futura PT Book";
-  src: url("assets/fonts/4854387f25c50d64.woff") format("woff");
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Futura PT Cond";
-  src: url("assets/fonts/fd42b527293d00d7.woff") format("woff");
-  font-weight: 500;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Futura PT Cond";
-  src: url("assets/fonts/5cfa68ac8a7cdb68.woff") format("woff");
-  font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Futura PT Cond";
-  src: url("assets/fonts/58d8452363588dac.woff") format("woff");
-  font-style: italic;
-  font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Futura PT Cond";
-  src: url("assets/fonts/6a754157a04a4e81.woff") format("woff");
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Futura PT Cond Book";
-  src: url("assets/fonts/2d590ede5fd1513b.woff") format("woff");
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Futura PT Cond Book";
-  src: url("assets/fonts/46972b1b15b20960.woff") format("woff");
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Futura PT Cond Extra";
-  src: url("assets/fonts/39b408591316dd7a.woff") format("woff");
-  font-style: italic;
-  font-weight: 800;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Futura PT Cond Extra";
-  src: url("assets/fonts/4a99b0c0396036a1.woff") format("woff");
-  font-weight: 800;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Futura PT Extra";
-  src: url("assets/fonts/ba3769bd5b902072.woff") format("woff");
-  font-style: italic;
-  font-weight: 800;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Futura PT Extra";
-  src: url("assets/fonts/18b780cdfb8dd206.woff") format("woff");
-  font-weight: 800;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Inter;
-  src: url("assets/fonts/inter.ttf") format("truetype");
-  font-display: swap;
-}
-
-@font-face {
   font-family: Montserrat;
   src: url("assets/fonts/montserrat.ttf") format("truetype");
   font-weight: 100 900;
@@ -192,41 +29,9 @@
 }
 
 @font-face {
-  font-family: "Roboto Mono";
-  src: url("assets/fonts/roboto-mono.ttf") format("truetype");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: rugon;
-  src: url("assets/fonts/fe151a33b3b076d1.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Times New Roman";
-  src: url("assets/fonts/e763030b5cd2cc5a.ttf") format("truetype");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: whitesaas;
-  src: url("assets/fonts/2e862f290597a99f.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Futura PT Demi";
   src: url("assets/fonts/futura-pt-demi.ttf") format("truetype");
   font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Futura PT Demi";
-  src: url("assets/fonts/futura-pt-demi-oblique.ttf") format("truetype");
-  font-style: italic;
   font-weight: 600;
   font-display: swap;
 }
@@ -946,14 +751,122 @@ a {
   display: none;
 }
 
-.service-payments__services-heading {
+.service-directory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.service-directory h2,
+.service-directory p {
   margin: 0;
+}
+
+.service-directory h2 {
+  width: 1170px;
+  max-width: calc(100% - 30px);
   color: #49084a;
   font-family: Montserrat, Arial, sans-serif;
   font-size: 40px;
   font-weight: 700;
   letter-spacing: 0.6px;
   line-height: 0.95;
+  text-align: center;
+}
+
+.service-directory__description {
+  width: 1170px;
+  max-width: calc(100% - 30px);
+  margin-top: 40px !important;
+  color: #000000;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.21px;
+  line-height: 2.29;
+  text-align: center;
+}
+
+.service-directory__logos {
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  grid-template-rows: 92px 92px 105px;
+  justify-content: space-between;
+  width: 1170px;
+  max-width: calc(100% - 30px);
+  margin-top: 0;
+  row-gap: 6px;
+}
+
+.service-directory__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  padding: 15px;
+}
+
+.service-directory__logo img {
+  display: block;
+  width: 170px;
+  max-height: 85px;
+  object-fit: contain;
+}
+
+.service-directory__action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1170px;
+  max-width: calc(100% - 30px);
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.service-directory__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 256.73px;
+  height: 50px;
+  gap: 10px;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  color: #ffffff;
+  font-family: "Futura PT", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.21px;
+  line-height: 1.5;
+  background: var(--color-primary);
+  transition: background-color var(--transition-base);
+}
+
+.service-directory__button:hover,
+.service-directory__button:focus-visible {
+  background: #68186a;
+  outline: none;
+}
+
+.service-directory__button svg {
+  width: 20px;
+  height: 20px;
+  color: #cc5fce;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.service-directory__action p {
+  color: #000000;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.21px;
+  line-height: 2.29;
   text-align: center;
 }
 
@@ -1752,9 +1665,102 @@ a {
     background: #a32a8d;
   }
 
-  .service-payments__services-heading {
+  .service-directory {
+    gap: 16px;
+  }
+
+  .service-directory h2 {
+    width: 100%;
+    max-width: none;
     font-size: 32px;
     line-height: 1.1;
+  }
+
+  .service-directory__description {
+    width: calc(100% - 32px);
+    max-width: none;
+    margin-top: 0 !important;
+    color: var(--color-text-muted);
+    font-size: 14px;
+    letter-spacing: normal;
+    line-height: 1.5;
+  }
+
+  .service-directory__logos {
+    display: grid;
+    grid-template-columns: 119px 170px 170px 170px 170px 145px 119px 170px;
+    grid-template-rows: repeat(2, 44px);
+    width: 100%;
+    max-width: none;
+    height: 108px;
+    gap: 16px 28px;
+    padding: 0 16px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .service-directory__logos::-webkit-scrollbar {
+    display: none;
+  }
+
+  .service-directory__logo {
+    width: auto;
+    height: 44px;
+    padding: 0;
+  }
+
+  .service-directory__logo img {
+    width: auto;
+    max-width: 170px;
+    max-height: 44px;
+  }
+
+  .service-directory__logo:nth-child(-n + 7) {
+    grid-row: 1;
+  }
+
+  .service-directory__logo:nth-child(n + 8) {
+    grid-row: 2;
+  }
+
+  .service-directory__logo:nth-child(1),
+  .service-directory__logo:nth-child(8) { grid-column: 1; }
+  .service-directory__logo:nth-child(2),
+  .service-directory__logo:nth-child(9) { grid-column: 2; }
+  .service-directory__logo:nth-child(3),
+  .service-directory__logo:nth-child(10) { grid-column: 3; }
+  .service-directory__logo:nth-child(4),
+  .service-directory__logo:nth-child(11) { grid-column: 4; }
+  .service-directory__logo:nth-child(5),
+  .service-directory__logo:nth-child(12) { grid-column: 5; }
+  .service-directory__logo:nth-child(6),
+  .service-directory__logo:nth-child(13) { grid-column: 6; }
+  .service-directory__logo:nth-child(7),
+  .service-directory__logo:nth-child(14) { grid-column: 7; }
+  .service-directory__logo:nth-child(15) { grid-column: 8; }
+
+  .service-directory__logo:nth-child(n + 8) {
+    transform: translateX(70px);
+  }
+
+  .service-directory__action {
+    width: 100%;
+    max-width: none;
+    gap: 16px;
+    margin-top: 0;
+    padding: 0 16px;
+  }
+
+  .service-directory__button {
+    width: 100%;
+    height: 52px;
+  }
+
+  .service-directory__action p {
+    color: var(--color-text-muted);
+    font-size: 12px;
+    letter-spacing: normal;
+    line-height: normal;
   }
 
   .api-neural-networks {

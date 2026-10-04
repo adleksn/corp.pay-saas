@@ -9,30 +9,19 @@ test -f script.js
 test -f assets/images/header-logo.webp
 test -f assets/fonts/caveat-semibold.ttf
 test -f assets/fonts/8fb415819784353d.woff
-test -f assets/fonts/fe151a33b3b076d1.woff
-test -f assets/fonts/inter.ttf
 test -f assets/fonts/montserrat.ttf
-test -f assets/fonts/roboto-mono.ttf
+test -f assets/fonts/futura-pt-medium.ttf
+test -f assets/fonts/futura-pt-demi.ttf
 
 grep -q 'styles.css' index.html
 grep -q 'script.js' index.html
 grep -q '<header class="site-header"' index.html
 grep -q -- '--color-primary' styles.css
 ! sed -n '/\.site-nav__link:hover,/,/^}/p' styles.css | grep -q 'background-color'
-grep -q 'font-family: Inter' styles.css
 grep -q 'font-family: Montserrat' styles.css
 sed -n '/font-family: Montserrat;/,/^}/p' styles.css | grep -q 'font-weight: 100 900'
-grep -q 'font-family: "Roboto Mono"' styles.css
-grep -q 'font-family: rugon' styles.css
 grep -q 'aria-expanded="false"' index.html
-test -f assets/fonts/futura-pt-medium.ttf
 grep -q 'assets/fonts/futura-pt-medium.ttf' styles.css
-test -f assets/fonts/futura-pt-demi-oblique.ttf
-grep -q 'assets/fonts/futura-pt-demi-oblique.ttf' styles.css
-test -f assets/fonts/futura-pt-light.ttf
-test -f assets/fonts/futura-pt-demi.ttf
-test -f assets/fonts/futura-pt-bold.ttf
-test -f assets/fonts/futura-pt-heavy.ttf
 grep -q 'assets/fonts/futura-pt-demi.ttf' styles.css
 sed -n '/\.brand__logo {/,/^}/p' styles.css | grep -q 'height: 61px'
 sed -n '/\.site-header__content {/,/^}/p' styles.css | grep -q 'margin-left: auto'
@@ -85,6 +74,10 @@ grep -q 'Зарубежные сервисы и подписки' index.html
 grep -q 'Комиссия снижается с ежемесячным объёмом' index.html
 grep -q 'class="service-steps"' index.html
 grep -q 'class="commission-tiers"' index.html
+grep -q 'class="service-directory"' index.html
+grep -q 'Проверить возможность' index.html
+test "$(find assets/images/services -maxdepth 1 -name '*.webp' | wc -l | tr -d ' ')" -eq 15
+grep -q '^\.service-directory {' styles.css
 grep -q 'setServicePaymentsVisibility' script.js
 grep -q '^\.service-payments {' styles.css
 grep -q 'id="api-neural-networks"' index.html
