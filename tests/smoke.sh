@@ -114,6 +114,7 @@ grep -q 'color: #ba5faa' styles.css
 grep -q 'class="purchases"' index.html
 grep -q 'Работаем с закупками и тендерами' index.html
 grep -q 'Коммерческое предложение' index.html
+grep -q 'm20 8 2 2-2 2' index.html
 grep -q '^\.purchases {' styles.css
 grep -q '^  \.purchases {' styles.css
 sed -n '/^  \.purchases {/,/^  }/p' styles.css | grep -q 'height: auto'
