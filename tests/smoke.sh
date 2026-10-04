@@ -117,3 +117,9 @@ grep -q 'Коммерческое предложение' index.html
 grep -q '^\.purchases {' styles.css
 grep -q '^  \.purchases {' styles.css
 grep -q 'account-choice__dots > \*\.is-active' styles.css
+grep -q 'class="reviews"' index.html
+grep -q 'Из Яндекс и 2GIS' index.html
+grep -q 'data-review-tab' index.html
+grep -q '^\.reviews {' styles.css
+grep -q '^  \.reviews {' styles.css
+grep -q 'reviewTabs' script.js

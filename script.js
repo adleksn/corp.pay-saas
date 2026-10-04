@@ -126,3 +126,15 @@ setupScrollDots('.api-benefits', '.api-benefits__dots', '.api-benefit');
 setupScrollDots('.commission-tiers', '.commission__dots', '.commission-tier');
 setupScrollDots('.foreign-payments__cards', '.foreign-payments__dots', '.foreign-payment-card');
 setupScrollDots('.account-choice__cards', '.account-choice__dots', '.account-choice__card');
+
+const reviewTabs = document.querySelectorAll('[data-review-tab]');
+
+reviewTabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    reviewTabs.forEach((item) => {
+      const isActive = item === tab;
+      item.classList.toggle('is-active', isActive);
+      item.setAttribute('aria-selected', String(isActive));
+    });
+  });
+});
