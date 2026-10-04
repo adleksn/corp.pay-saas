@@ -125,3 +125,4 @@ setupScrollDots('.services__list', '.services__dots', '.service-card');
 setupScrollDots('.api-benefits', '.api-benefits__dots', '.api-benefit');
 setupScrollDots('.commission-tiers', '.commission__dots', '.commission-tier');
 setupScrollDots('.foreign-payments__cards', '.foreign-payments__dots', '.foreign-payment-card');
+setupScrollDots('.account-choice__cards', '.account-choice__dots', '.account-choice__card');

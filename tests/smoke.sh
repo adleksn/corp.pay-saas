@@ -82,6 +82,11 @@ test "$(find assets/images/services -maxdepth 1 -name '*.webp' | wc -l | tr -d '
 grep -q '^\.service-directory {' styles.css
 grep -q '@keyframes service-directory-first-row' styles.css
 grep -q 'service-directory__logo-set--duplicate' index.html
+grep -q 'class="account-choice"' index.html
+grep -q 'Личный кабинет или живой оператор' index.html
+grep -q 'class="account-choice__cards"' index.html
+grep -q '^\.account-choice {' styles.css
+grep -q '^  \.account-choice {' styles.css
 grep -q 'setServicePaymentsVisibility' script.js
 grep -q '^\.service-payments {' styles.css
 grep -q 'id="api-neural-networks"' index.html
