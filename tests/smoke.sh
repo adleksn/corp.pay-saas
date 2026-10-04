@@ -104,3 +104,10 @@ grep -q '^\.foreign-payments {' styles.css
 grep -q '^\.foreign-payments__cards-group {' styles.css
 grep -q 'class="api-benefits-group"' index.html
 grep -q '^\.api-benefits-group {' styles.css
+grep -q 'class="work-schemes"' index.html
+grep -q 'Полностью официально' index.html
+grep -q 'Упрощённо' index.html
+grep -q '^\.work-schemes {' styles.css
+grep -q '^  \.work-schemes {' styles.css
+grep -q 'account-choice__mobile-title' index.html
+grep -q 'color: #ba5faa' styles.css
