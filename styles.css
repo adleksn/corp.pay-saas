@@ -1346,7 +1346,6 @@ a {
 .reviews {
   display: flex;
   justify-content: center;
-  padding: 88px 0;
   background: #ffffff;
 }
 
@@ -2689,7 +2688,6 @@ a {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 56px 0;
     overflow: hidden;
   }
 
