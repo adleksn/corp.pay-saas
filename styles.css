@@ -13,7 +13,7 @@
   padding: 88px 32px;
   overflow: hidden;
   color: #ffffff;
-  background: linear-gradient(180deg, #3f2164 0%, #46246c 100%);
+  background: linear-gradient(180deg, #402065 0%, #402065 58%, #44236b 100%);
 }
 
 .final-cta__glow {
@@ -285,6 +285,7 @@
   .final-cta {
     min-height: 0;
     padding: 64px 16px;
+    background: linear-gradient(180deg, #402065 0%, #402065 53%, #44236b 100%);
   }
 
   .final-cta__content {
