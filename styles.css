@@ -572,7 +572,7 @@ a {
 .site-nav__link {
   padding: 8px 14px;
   border-radius: var(--radius-md);
-  color: var(--color-primary);
+  color: #741a75;
   font-family: "Futura PT Demi", "Futura PT", Arial, sans-serif;
   font-size: 18px;
   font-weight: 600;
