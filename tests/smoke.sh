@@ -6,6 +6,7 @@ test -f layout-rules.md
 test -f index.html
 test -f styles.css
 test -f script.js
+test -f 404.html
 test -f assets/images/header-logo.webp
 test -f assets/fonts/caveat-semibold.ttf
 test -f assets/fonts/8fb415819784353d.woff
@@ -137,6 +138,9 @@ grep -q 'data-faq-trigger' index.html
 grep -q '^\.faq {' styles.css
 grep -q '^  \.faq {' styles.css
 grep -q 'faqTriggers' script.js
+grep -q 'class="error-page"' 404.html
+grep -q 'Такой страницы нет' 404.html
+grep -q '^\.error-hero {' styles.css
 grep -q 'class="final-cta"' index.html
 grep -q 'Расскажите, что нужно оплатить' index.html
 grep -q 'class="site-footer"' index.html

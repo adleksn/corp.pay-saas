@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#402065">
+    <title>Страница не найдена — corp.pay</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="error-page">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="index.html" aria-label="corp.pay — главная">
+          <img class="brand__logo" src="assets/images/header-logo.webp" width="140" height="62" alt="corp.pay">
+          <span class="brand__note">для бизнеса</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="menu-toggle__line"></span><span class="menu-toggle__line"></span><span class="menu-toggle__line"></span>
+        </button>
+
+        <div class="site-header__content">
+          <nav class="site-nav" aria-label="Основная навигация">
+            <a class="site-nav__link" href="index.html#services">ЧТО МЫ ДЕЛАЕМ</a>
+            <a class="site-nav__link" href="index.html#work-schemes">СХЕМЫ РАБОТЫ</a>
+            <a class="site-nav__link" href="index.html#purchases">ЗАКУПКИ</a>
+            <a class="site-nav__link" href="index.html#reviews">ОТЗЫВЫ</a>
+            <a class="site-nav__link" href="contacts.html">КОНТАКТЫ</a>
+          </nav>
+          <div class="site-header__actions">
+            <a class="button button--primary" href="https://t.me" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.3A8.4 8.4 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3.2a8.4 8.4 0 0 1 9 8.3Z"></path></svg>Написать оператору</a>
+            <a class="button button--icon" href="index.html#account-choice" aria-label="Личный кабинет"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.2"></circle><path d="M5.5 21c.7-3.6 3-5.4 6.5-5.4s5.8 1.8 6.5 5.4"></path></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <aside class="mobile-menu" id="mobile-menu" aria-label="Мобильное меню" hidden>
+        <nav class="mobile-menu__nav" aria-label="Навигация">
+          <a class="mobile-menu__link mobile-menu__link--expandable" href="index.html#service-payments"><span>Оплата сервисов</span><span class="mobile-menu__plus" aria-hidden="true">+</span></a>
+          <a class="mobile-menu__link mobile-menu__link--expandable" href="index.html#foreign-payments"><span>Переводы</span><span class="mobile-menu__plus" aria-hidden="true">+</span></a>
+          <a class="mobile-menu__link" href="index.html#reviews">Отзывы</a>
+          <a class="mobile-menu__link" href="contacts.html">Контакты</a>
+        </nav>
+        <div class="mobile-menu__contacts">
+          <a class="mobile-menu__phone" href="tel:88002007965">8 (800) 200-79-65</a>
+          <p class="mobile-menu__contact-title">Написать нам в:</p>
+          <ul class="mobile-menu__contact-list"><li>Telegram</li><li>MAX</li><li>ВКонтакте</li><li>WhatsApp</li></ul>
+        </div>
+      </aside>
+      <button class="mobile-menu__close" type="button" aria-label="Закрыть меню" hidden><svg width="32" height="32" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m5 5 14 14M19 5 5 19"></path></svg></button>
+    </header>
+
+    <main>
+      <section class="error-hero" aria-labelledby="error-title">
+        <span class="error-hero__glow error-hero__glow--left" aria-hidden="true"></span>
+        <span class="error-hero__glow error-hero__glow--right" aria-hidden="true"></span>
+        <div class="error-hero__content">
+          <div class="error-hero__title-stack">
+            <span aria-hidden="true">404</span>
+            <h1 id="error-title">Такой страницы нет</h1>
+          </div>
+          <p class="error-hero__intro">Возможно, ссылка устарела или в адресе опечатка.<br class="error-hero__desktop-break"> Вот куда можно перейти.</p>
+          <nav class="error-hero__links" aria-label="Полезные ссылки">
+            <a class="error-link error-link--home" href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V10Z"></path></svg><strong>Главная страница</strong><span>Все услуги для юрлиц и ИП</span></a>
+            <a class="error-link error-link--account" href="index.html#account-choice"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.2"></circle><path d="M5.5 21c.7-3.6 3-5.4 6.5-5.4s5.8 1.8 6.5 5.4"></path></svg><strong>Личный кабинет</strong><span>Заявки, платежи и документы</span></a>
+            <a class="error-link error-link--contacts" href="contacts.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 18h14M6 8h12M7 8V5l5-2 5 2v3M8 18v-7M12 18v-7M16 18v-7"></path></svg><strong>Контакты и реквизиты</strong><span>ИНН, банковские реквизиты, ЭДО</span></a>
+            <a class="error-link error-link--operator" href="https://t.me" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.3A8.4 8.4 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3.2a8.4 8.4 0 0 1 9 8.3Z"></path><path d="M8.5 20.1 7 22l.2-3.5"></path></svg><strong>Написать оператору</strong><span>Ежедневно 9:00–19:00 МСК</span></a>
+          </nav>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__identity"><img src="assets/images/header-logo.webp" width="140" height="62" alt="Плати легко"><strong>ООО ПЛАТФОРМА</strong><p>RUT: 220064850010<br>BLANCO JUAN BENITO, 780<br>MONTEVIDEO, URUGUAY</p><a href="mailto:info@pay-saas.ru">info@pay-saas.ru</a><span>© 2022-2026 Плати Легко!</span></div>
+        <nav class="site-footer__nav" aria-label="Разделы сайта"><div><a href="index.html#services">ЧТО МЫ ДЕЛАЕМ</a><a href="index.html#work-schemes">СХЕМЫ РАБОТЫ</a><a href="index.html#purchases">ЗАКУПКИ</a><a href="index.html#reviews">ОТЗЫВЫ</a></div><div><a href="#contact-operator">ПАРТНЕРСТВО</a><a href="index.html#services">УСЛУГИ</a><a href="index.html#service-directory">МАТЕРИАЛЫ</a><a href="#contact-operator">ФИЗ.ЛИЦАМ</a></div></nav>
+        <div class="site-footer__contacts"><a class="site-footer__button" href="https://t.me" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.3A8.4 8.4 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3.2a8.4 8.4 0 0 1 9 8.3Z"></path><path d="M8.5 20.1 7 22l.2-3.5"></path></svg>Написать оператору</a><a href="#">Публичная оферта</a><a href="#">Политика конфиденциальности</a></div>
+        <div class="site-footer__social"><div aria-label="Социальные сети"><a href="#" aria-label="Сайт"><svg viewBox="0 0 24 24"><path d="m12 2 2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2L12 2Z"></path></svg></a><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M21.5 7.2a2.6 2.6 0 0 0-1.8-1.8C18.1 5 12 5 12 5s-6.1 0-7.7.4a2.6 2.6 0 0 0-1.8 1.8C2 8.8 2 12 2 12s0 3.2.5 4.8a2.6 2.6 0 0 0 1.8 1.8C5.9 19 12 19 12 19s6.1 0 7.7-.4a2.6 2.6 0 0 0 1.8-1.8C22 15.2 22 12 22 12s0-3.2-.5-4.8Z"></path><path d="m10 15 5-3-5-3v6Z" fill="currentColor" stroke="none"></path></svg></a><a href="#" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="m21 3-3.5 18-6.2-5-3.5 2.8.6-5.1L18 5.2 6.2 11.3 2.9 10 21 3Z"></path></svg></a><a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.9 7L3 20l1.6-4.7A8 8 0 1 1 20 11.5Z"></path></svg></a><a href="#" aria-label="ВКонтакте"><svg viewBox="0 0 24 24"><path d="M4 7h2.8c.2 4.7 2.2 7.4 3.8 8V7h2.7v4.6c1.6-.2 3.3-2.8 3.8-4.6h2.7c-.4 2.3-2.2 4.9-3.5 5.9 1.3.8 3.4 3 4.2 5.1h-3c-.6-1.7-2.1-3.9-3.9-4.1V18h-.3C7.8 18 4.8 14.2 4 7Z"></path></svg></a><a href="#" aria-label="TenChat"><svg viewBox="0 0 24 24"><path d="M5 5h14v4h-5v10h-4V9H5V5Z"></path></svg></a></div><a href="mailto:info@pay-saas.ru">Написать директору</a></div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
