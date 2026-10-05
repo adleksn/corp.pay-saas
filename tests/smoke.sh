@@ -40,7 +40,7 @@ grep -q 'class="hero__cta"' index.html
 grep -q "classList.toggle('is-menu-open'" script.js
 grep -q '.site-header.is-menu-open .mobile-menu' styles.css
 grep -q '.site-header.is-menu-open .menu-toggle' styles.css
-grep -q 'width: 64%' styles.css
+grep -q 'width: 157px' styles.css
 grep -q '.site-header.is-menu-open {' styles.css
 sed -n '/\.site-header\.is-menu-open {/,/^  }/p' styles.css | grep -q 'background: transparent'
 sed -n '/\.mobile-menu__link {/,/^  }/p' styles.css | grep -q 'font-size: 16px'
@@ -137,3 +137,8 @@ grep -q 'data-faq-trigger' index.html
 grep -q '^\.faq {' styles.css
 grep -q '^  \.faq {' styles.css
 grep -q 'faqTriggers' script.js
+grep -q 'class="final-cta"' index.html
+grep -q 'Расскажите, что нужно оплатить' index.html
+grep -q 'class="site-footer"' index.html
+grep -q '^\.final-cta {' styles.css
+grep -q '^\.site-footer {' styles.css
