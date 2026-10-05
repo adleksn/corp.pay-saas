@@ -190,6 +190,7 @@
   width: 100%;
   height: 73px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .site-footer__identity a {
