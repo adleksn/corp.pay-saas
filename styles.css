@@ -3829,6 +3829,8 @@ a {
   line-height: 1.4;
 }
 
+.contacts-hero__mobile-copy { display: none; }
+
 .contact-channels {
   display: flex;
   justify-content: center;
@@ -3847,6 +3849,7 @@ a {
 .contact-card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   min-height: 300px;
   gap: 14px;
   padding: 28px;
@@ -3905,7 +3908,6 @@ a {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-top: auto;
 }
 
 .contact-card__button {
@@ -3925,7 +3927,7 @@ a {
 
 .contact-card__button svg { width: 18px; height: 18px; }
 .contact-card small { color: var(--color-text-muted); font-family: Montserrat, Arial, sans-serif; font-size: 13px; font-weight: 400; text-align: center; }
-.contact-card__link { margin-top: auto; color: #a32a8d; font-family: Montserrat, Arial, sans-serif; font-size: 15px; font-weight: 600; }
+.contact-card__link { color: #a32a8d; font-family: Montserrat, Arial, sans-serif; font-size: 15px; font-weight: 600; }
 
 .requisites { display: flex; justify-content: center; padding: 88px 32px; background: #fbf8fc; }
 .requisites__inner { display: flex; flex-direction: column; width: 1200px; max-width: 100%; gap: 40px; }
@@ -3941,12 +3943,15 @@ a {
 .requisite button { position: absolute; right: 0; top: 50%; padding: 0; color: var(--color-text-muted); background: transparent; font-size: 18px; transform: translateY(-50%); cursor: pointer; }
 
 @media (max-width: 900px) {
-  .contacts-hero { height: 154px; gap: 12px; padding: 48px 16px; }
+  .contacts-hero { height: auto; gap: 12px; padding: 48px 16px; }
   .contacts-hero h1 { font-size: 28px; }
   .contacts-hero p { font-size: 14px; line-height: 1.4; }
+  .contacts-hero__desktop-copy { display: none; }
+  .contacts-hero__mobile-copy { display: block; }
   .contact-channels { padding: 56px 16px; }
   .contact-channels__grid { grid-template-columns: 1fr; gap: 16px; }
-  .contact-card { min-height: 0; gap: 12px; padding: 24px; border-radius: 20px; box-shadow: none; }
+  .contact-card { justify-content: flex-start; min-height: 0; gap: 12px; padding: 24px; border-radius: 20px; box-shadow: none; }
+  .contact-card--featured { box-shadow: 0 10px 30px rgb(163 42 141 / 15%); }
   .contact-card__icon { width: 36px; height: 36px; border-radius: 10px; }
   .contact-card__icon svg { width: 20px; height: 20px; }
   .contact-card h2 { font-size: 17px; }
