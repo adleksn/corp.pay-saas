@@ -141,7 +141,7 @@
 .site-footer {
   display: flex;
   justify-content: center;
-  padding: 41px 32px 30px;
+  padding: 41px 0 30px;
   border-top: 1px solid #e0e0e0;
   background: #ffffff;
 }
@@ -149,9 +149,10 @@
 .site-footer__inner {
   display: grid;
   grid-template-columns: 200px 700px 300px;
+  grid-template-rows: 177px 150px;
   grid-template-areas: "identity nav contacts" "identity social contacts";
   width: 1200px;
-  max-width: 100%;
+  max-width: calc(100% - 64px);
   column-gap: 0;
 }
 
@@ -194,14 +195,16 @@
 .site-footer__nav {
   grid-area: nav;
   display: grid;
-  grid-template-columns: 320px 320px;
+  grid-template-columns: repeat(2, 350px);
   gap: 0;
-  padding: 6px 15px 0;
+  height: 177px;
+  padding: 0;
 }
 
 .site-footer__nav div {
   display: flex;
   flex-direction: column;
+  padding: 0 15px;
 }
 
 .site-footer__nav a {
@@ -218,14 +221,15 @@
   grid-area: contacts;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 21px;
+  gap: 0;
   align-items: flex-end;
-  padding: 3px 15px 0;
+  height: 327px;
+  padding: 0 15px;
   color: #741b75;
   font-family: Montserrat, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
+  line-height: 2.29;
 }
 
 .site-footer__button {
@@ -233,8 +237,8 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  width: 198px;
-  height: 42px;
+  width: 230px;
+  height: 50px;
   border-radius: 15px;
   color: #ffffff;
   background: #741b75;
@@ -242,11 +246,20 @@
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.21px;
+  margin-bottom: 10px;
 }
 
 .site-footer__button svg {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
+}
+
+.site-footer__contacts > a:not(.site-footer__button) {
+  width: 230px;
+  padding: 7px 0;
+  font-size: 13px;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .site-footer__social {
@@ -254,17 +267,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  padding-top: 36px;
+  gap: 0;
+  padding: 0;
   color: #741b75;
   font-family: Montserrat, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 2.29;
 }
 
 .site-footer__social > div {
   display: flex;
   align-items: center;
   gap: 18px;
+  height: 50px;
 }
 
 .site-footer__social > div a {
@@ -496,7 +511,7 @@ a {
 }
 
 .site-nav {
-  gap: 20px;
+  gap: 6px;
 }
 
 .site-nav__link {
@@ -536,8 +551,8 @@ a {
 .button {
   gap: 10px;
   min-width: 224px;
-  justify-content: flex-start;
-  padding: 13px 16px;
+  justify-content: center;
+  padding: 13px 31px;
   border: 1px solid var(--color-primary);
   border-radius: var(--radius-md);
   transition: background-color var(--transition-base), color var(--transition-base), transform var(--transition-base);
@@ -566,6 +581,28 @@ a {
 
 .button__icon {
   flex: 0 0 18px;
+}
+
+.site-header .button svg,
+.site-header .profile-button svg {
+  display: block;
+  flex: 0 0 auto;
+  max-width: none;
+  fill: none;
+  stroke: currentcolor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.site-header .button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.site-header .profile-button svg {
+  width: 20px;
+  height: 20px;
 }
 
 .profile-button {
