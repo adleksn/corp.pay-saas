@@ -3830,6 +3830,8 @@ a {
 }
 
 .contacts-hero__mobile-copy { display: none; }
+.contacts-hero__desktop-copy,
+.contacts-hero__mobile-copy { width: 100%; text-align: center; }
 
 .contact-channels {
   display: flex;
@@ -3926,7 +3928,7 @@ a {
 }
 
 .contact-card__button svg { width: 18px; height: 18px; }
-.contact-card small { color: var(--color-text-muted); font-family: Montserrat, Arial, sans-serif; font-size: 13px; font-weight: 400; text-align: center; }
+.contact-card small { color: var(--color-text-muted); font-family: Montserrat, Arial, sans-serif; font-size: 13px; font-weight: 400; text-align: left; }
 .contact-card__link { color: #a32a8d; font-family: Montserrat, Arial, sans-serif; font-size: 15px; font-weight: 600; }
 
 .requisites { display: flex; justify-content: center; padding: 88px 32px; background: #fbf8fc; }
@@ -3939,8 +3941,43 @@ a {
 .requisites-card h3 { color: var(--color-text); font-family: Montserrat, Arial, sans-serif; font-size: 20px; font-weight: 600; }
 .requisite { position: relative; display: flex; flex-direction: column; gap: 4px; min-height: 66px; padding: 14px 32px 14px 0; border-bottom: 1px solid var(--color-border); }
 .requisite span { color: var(--color-text-muted); font-family: Montserrat, Arial, sans-serif; font-size: 12px; }
-.requisite b { color: var(--color-text); font-family: "Roboto Mono", monospace; font-size: 15px; font-weight: 500; line-height: 1.35; }
-.requisite button { position: absolute; right: 0; top: 50%; padding: 0; color: var(--color-text-muted); background: transparent; font-size: 18px; transform: translateY(-50%); cursor: pointer; }
+.requisite b { color: var(--color-text); font-family: "Roboto Mono", monospace; font-size: 14px; font-weight: 500; line-height: 1.35; }
+.requisite button,
+.edo-field button { position: absolute; right: 0; top: 50%; display: grid; width: 18px; height: 18px; padding: 0; color: var(--color-text-muted); background: transparent; transform: translateY(-50%); cursor: pointer; place-items: center; }
+.requisite button svg,
+.edo-field button svg,
+.requisites-action svg { width: 18px; height: 18px; fill: none; stroke: currentcolor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+
+.edo-card { display: flex; flex-direction: column; gap: 16px; padding: 32px; border-radius: 24px; background: #a32a8d14; }
+.edo-card h3 { margin: 0; color: #a32a8d; font-family: Montserrat, Arial, sans-serif; font-size: 20px; font-weight: 600; line-height: 1.2; }
+.edo-card__fields { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; }
+.edo-field { position: relative; display: flex; flex-direction: column; gap: 4px; min-height: 42px; padding-right: 32px; }
+.edo-field span { color: var(--color-text-muted); font-family: Montserrat, Arial, sans-serif; font-size: 12px; }
+.edo-field b { color: var(--color-text); font-family: "Roboto Mono", monospace; font-size: 14px; font-weight: 500; line-height: 1.35; }
+.edo-field button { color: #a32a8d; }
+.requisites__actions { display: flex; justify-content: center; gap: 16px; }
+.requisites-action { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; gap: 10px; padding: 13px 31px; border: 1px solid #741b75; border-radius: 15px; font-family: "Futura PT", Arial, sans-serif; font-size: 16px; font-weight: 500; letter-spacing: .21px; }
+.requisites-action--primary { color: #ffffff; background: #741b75; }
+.requisites-action--secondary { border: 1.5px solid #a32a8d; color: #a32a8d; background: transparent; }
+
+.account-documents { display: flex; justify-content: center; padding: 88px 32px; background: #ffffff; }
+.account-documents__inner { display: flex; flex-direction: column; width: 1200px; max-width: 100%; gap: 40px; }
+.account-documents__heading { display: flex; flex-direction: column; gap: 12px; }
+.account-documents h2,
+.account-documents h3,
+.account-documents p { margin: 0; }
+.account-documents h2 { color: var(--color-text); font-family: Montserrat, Arial, sans-serif; font-size: 36px; font-weight: 700; line-height: 1.2; }
+.account-documents__heading p { color: var(--color-text-muted); font-family: Montserrat, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 1.5; }
+.account-documents__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.account-documents__grid article { display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 20px; background: #f8f6fa; }
+.account-documents__grid article > div { display: grid; width: 40px; height: 40px; border-radius: 12px; color: #a32a8d; background: #ffffff; place-items: center; }
+.account-documents__grid svg,
+.account-documents__action svg { width: 22px; height: 22px; fill: none; stroke: currentcolor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+.account-documents__grid h3 { color: var(--color-text); font-family: Montserrat, Arial, sans-serif; font-size: 17px; font-weight: 600; line-height: 1.25; }
+.account-documents__action { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.account-documents__action a { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; gap: 10px; padding: 13px 31px; border: 1px solid #741b75; border-radius: 15px; color: #ffffff; background: #741b75; font-family: "Futura PT", Arial, sans-serif; font-size: 16px; font-weight: 500; letter-spacing: .21px; }
+.account-documents__action svg { width: 20px; height: 20px; }
+.account-documents__action p { max-width: 1200px; color: var(--color-text-muted); font-family: Montserrat, Arial, sans-serif; font-size: 13px; font-weight: 400; text-align: center; }
 
 @media (max-width: 900px) {
   .contacts-hero { height: auto; gap: 12px; padding: 48px 16px; }
@@ -3963,10 +4000,30 @@ a {
   .requisites__heading { align-items: center; text-align: center; }
   .requisites h2 { font-size: 24px; }
   .requisites__heading p { font-size: 14px; }
-  .requisites__columns { display: flex; flex-direction: column; gap: 16px; padding: 0; background: transparent; }
+  .requisites__columns { display: flex; flex-direction: column; gap: 20px; padding: 0; background: transparent; }
   .requisites-card { padding: 24px; border-radius: 24px; background: #ffffff; }
   .requisites-card h3 { font-size: 18px; }
-  .requisite b { font-size: 13px; }
+  .requisite { min-height: 0; padding: 12px 28px 12px 0; }
+  .requisite b { font-size: 14px; }
+  .edo-card { gap: 12px; padding: 24px; border-radius: 20px; }
+  .edo-card h3 { font-size: 17px; }
+  .edo-card__fields { grid-template-columns: 1fr; gap: 12px; }
+  .edo-field { min-height: 0; }
+  .requisites__actions { flex-direction: column; gap: 12px; }
+  .requisites-action { width: 100%; min-height: 48px; padding: 12px 24px; }
+  .account-documents { padding: 56px 16px; }
+  .account-documents__inner { gap: 20px; }
+  .account-documents__heading { align-items: center; text-align: center; }
+  .account-documents h2 { font-size: 24px; }
+  .account-documents__heading p { font-size: 14px; }
+  .account-documents__grid { grid-template-columns: 1fr; gap: 12px; }
+  .account-documents__grid article { gap: 12px; padding: 24px; }
+  .account-documents__grid article > div { width: 36px; height: 36px; border-radius: 10px; }
+  .account-documents__grid svg { width: 20px; height: 20px; }
+  .account-documents__grid h3 { font-size: 16px; }
+  .account-documents__action { width: 100%; gap: 16px; }
+  .account-documents__action a { width: 100%; min-height: 48px; padding: 12px 24px; }
+  .account-documents__action p { font-size: 12px; }
 }
 
 @media (max-width: 900px) {

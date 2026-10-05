@@ -3,21 +3,43 @@ const menuToggle = document.querySelector('.menu-toggle');
 const mobileMenu = document.querySelector('.mobile-menu');
 const menuClose = document.querySelector('.mobile-menu__close');
 
-document.querySelectorAll('.requisite button').forEach((button) => {
-  button.addEventListener('click', async () => {
-    const value = button.closest('.requisite')?.dataset.copy;
-    if (!value || !navigator.clipboard) {
-      return;
-    }
+const copyText = async (value) => {
+  if (!value || !navigator.clipboard) {
+    return false;
+  }
 
-    try {
-      await navigator.clipboard.writeText(value);
-      button.textContent = '✓';
-      window.setTimeout(() => { button.textContent = '⧉'; }, 1200);
-    } catch {
-      // Clipboard access can be unavailable in a local preview.
+  try {
+    await navigator.clipboard.writeText(value);
+    return true;
+  } catch {
+    return false;
+  }
+};
+
+document.querySelectorAll('.requisite button, .edo-field button').forEach((button) => {
+  button.addEventListener('click', async () => {
+    const value = button.closest('[data-copy]')?.dataset.copy;
+    const originalLabel = button.getAttribute('aria-label');
+    if (await copyText(value)) {
+      button.setAttribute('aria-label', 'Скопировано');
+      window.setTimeout(() => {
+        button.setAttribute('aria-label', originalLabel || 'Скопировать');
+      }, 1200);
     }
   });
+});
+
+document.querySelector('[data-copy-all]')?.addEventListener('click', async (event) => {
+  const button = event.currentTarget;
+  const text = Array.from(document.querySelectorAll('.requisite, .edo-field'))
+    .map((item) => item.dataset.copy)
+    .filter(Boolean)
+    .join('\n');
+
+  if (await copyText(text)) {
+    button.classList.add('is-copied');
+    window.setTimeout(() => button.classList.remove('is-copied'), 1200);
+  }
 });
 
 const setMenuState = (isOpen) => {
