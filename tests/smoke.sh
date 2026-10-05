@@ -131,3 +131,9 @@ grep -q 'Работаем с 2022 года' index.html
 grep -q 'trust-card__mobile-copy' index.html
 grep -q '^\.trust {' styles.css
 grep -q '^  \.trust {' styles.css
+grep -q 'class="faq"' index.html
+grep -q 'Какие документы вы предоставляете?' index.html
+grep -q 'data-faq-trigger' index.html
+grep -q '^\.faq {' styles.css
+grep -q '^  \.faq {' styles.css
+grep -q 'faqTriggers' script.js
