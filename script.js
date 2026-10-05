@@ -3,6 +3,23 @@ const menuToggle = document.querySelector('.menu-toggle');
 const mobileMenu = document.querySelector('.mobile-menu');
 const menuClose = document.querySelector('.mobile-menu__close');
 
+document.querySelectorAll('.requisite button').forEach((button) => {
+  button.addEventListener('click', async () => {
+    const value = button.closest('.requisite')?.dataset.copy;
+    if (!value || !navigator.clipboard) {
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(value);
+      button.textContent = '✓';
+      window.setTimeout(() => { button.textContent = '⧉'; }, 1200);
+    } catch {
+      // Clipboard access can be unavailable in a local preview.
+    }
+  });
+});
+
 const setMenuState = (isOpen) => {
   if (!header || !menuToggle || !mobileMenu || !menuClose) {
     return;
