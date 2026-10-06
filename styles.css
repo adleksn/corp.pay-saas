@@ -4018,11 +4018,26 @@ a {
   font-size: 16px;
   font-weight: 500;
   letter-spacing: .21px;
+  box-shadow: 0 4px 12px rgb(116 27 117 / 14%);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), background-color var(--transition-base);
+}
+
+.contact-card__button:hover {
+  transform: translateY(-2px);
+  background: #8a218b;
+  box-shadow: 0 8px 18px rgb(116 27 117 / 22%);
+}
+
+.contact-card__button:focus-visible,
+.contact-card__link:focus-visible {
+  outline: 2px solid #a32a8d;
+  outline-offset: 3px;
 }
 
 .contact-card__button svg { width: 18px; height: 18px; }
 .contact-card small { color: var(--color-text-muted); font-family: Montserrat, Arial, sans-serif; font-size: 13px; font-weight: 400; text-align: left; }
-.contact-card__link { color: #a32a8d; font-family: Montserrat, Arial, sans-serif; font-size: 15px; font-weight: 600; }
+.contact-card__link { color: #a32a8d; font-family: Montserrat, Arial, sans-serif; font-size: 15px; font-weight: 600; transition: color var(--transition-base), transform var(--transition-base); }
+.contact-card__link:hover { color: #741b75; transform: translateX(2px); }
 
 .requisites { display: flex; justify-content: center; padding: 88px 32px; background: #fbf8fc; }
 .requisites__inner { display: flex; flex-direction: column; width: 1200px; max-width: 100%; gap: 40px; }
