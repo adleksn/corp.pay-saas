@@ -4,27 +4,51 @@ const mobileMenu = document.querySelector('.mobile-menu');
 const menuClose = document.querySelector('.mobile-menu__close');
 
 const copyText = async (value) => {
-  if (!value || !navigator.clipboard) {
+  if (!value) {
     return false;
   }
 
   try {
-    await navigator.clipboard.writeText(value);
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(value);
+      return true;
+    }
+
+    const field = document.createElement('textarea');
+    field.value = value;
+    field.setAttribute('readonly', '');
+    field.style.position = 'fixed';
+    field.style.opacity = '0';
+    document.body.append(field);
+    field.select();
+    const copied = document.execCommand('copy');
+    field.remove();
+    if (!copied) return false;
     return true;
   } catch {
     return false;
   }
 };
 
+const showCopyFeedback = (button, copiedLabel = 'Скопировано') => {
+  const originalLabel = button.getAttribute('aria-label') || 'Скопировать';
+  const originalTitle = button.getAttribute('title') || originalLabel;
+  button.classList.add('is-copied');
+  button.setAttribute('aria-label', copiedLabel);
+  button.setAttribute('title', copiedLabel);
+
+  window.setTimeout(() => {
+    button.classList.remove('is-copied');
+    button.setAttribute('aria-label', originalLabel);
+    button.setAttribute('title', originalTitle);
+  }, 1400);
+};
+
 document.querySelectorAll('.requisite button, .edo-field button').forEach((button) => {
   button.addEventListener('click', async () => {
     const value = button.closest('[data-copy]')?.dataset.copy;
-    const originalLabel = button.getAttribute('aria-label');
     if (await copyText(value)) {
-      button.setAttribute('aria-label', 'Скопировано');
-      window.setTimeout(() => {
-        button.setAttribute('aria-label', originalLabel || 'Скопировать');
-      }, 1200);
+      showCopyFeedback(button);
     }
   });
 });
@@ -37,8 +61,16 @@ document.querySelector('[data-copy-all]')?.addEventListener('click', async (even
     .join('\n');
 
   if (await copyText(text)) {
+    const originalText = button.dataset.copyLabel || button.textContent.trim();
+    button.dataset.copyLabel = originalText;
     button.classList.add('is-copied');
-    window.setTimeout(() => button.classList.remove('is-copied'), 1200);
+    button.setAttribute('aria-label', 'Все реквизиты скопированы');
+    button.lastChild.textContent = 'Скопировано';
+    window.setTimeout(() => {
+      button.classList.remove('is-copied');
+      button.setAttribute('aria-label', originalText);
+      button.lastChild.textContent = originalText;
+    }, 1400);
   }
 });
 

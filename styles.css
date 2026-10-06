@@ -2451,6 +2451,7 @@ a {
   font-size: 12px;
   font-weight: 600;
   line-height: normal;
+  white-space: nowrap;
 }
 
 .foreign-payments__dots {
@@ -4106,10 +4107,20 @@ a {
 .requisite span { color: var(--color-text-muted); font-family: Montserrat, Arial, sans-serif; font-size: 12px; }
 .requisite b { color: var(--color-text); font-family: "Roboto Mono", monospace; font-size: 14px; font-weight: 500; line-height: 1.35; }
 .requisite button,
-.edo-field button { position: absolute; right: 0; top: 50%; display: grid; width: 18px; height: 18px; padding: 0; color: var(--color-text-muted); background: transparent; transform: translateY(-50%); cursor: pointer; place-items: center; }
+.edo-field button { position: absolute; right: -7px; top: 50%; display: grid; width: 32px; height: 32px; padding: 0; border: 0; border-radius: 8px; color: var(--color-text-muted); background: transparent; transform: translateY(-50%); cursor: pointer; transition: color var(--transition-base), background-color var(--transition-base), transform var(--transition-base); place-items: center; }
+.requisite button:hover,
+.edo-field button:hover { color: #741b75; background: #f5edf6; }
+.requisite button:focus-visible,
+.edo-field button:focus-visible { outline: 2px solid #a32a8d; outline-offset: 2px; }
+.requisite button.is-copied,
+.edo-field button.is-copied { color: #25744f; background: #e7f7ed; }
 .requisite button svg,
 .edo-field button svg,
 .requisites-action svg { width: 18px; height: 18px; fill: none; stroke: currentcolor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+.requisite button.is-copied svg,
+.edo-field button.is-copied svg { display: none; }
+.requisite button.is-copied::after,
+.edo-field button.is-copied::after { content: "✓"; font-family: Arial, sans-serif; font-size: 19px; font-weight: 700; line-height: 1; }
 
 .edo-card { display: flex; flex-direction: column; gap: 16px; padding: 32px; border-radius: 24px; background: #a32a8d14; }
 .edo-card h3 { margin: 0; color: #a32a8d; font-family: Montserrat, Arial, sans-serif; font-size: 20px; font-weight: 600; line-height: 1.2; }
@@ -4120,10 +4131,11 @@ a {
 .edo-field button { color: #a32a8d; }
 .requisites__actions { display: flex; justify-content: center; gap: 16px; }
 .requisites-action { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; gap: 10px; padding: 13px 31px; border: 1px solid #741b75; border-radius: 15px; font-family: "Futura PT", Arial, sans-serif; font-size: 16px; font-weight: 500; letter-spacing: .21px; transition: transform var(--transition-base), background-color var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base), color var(--transition-base); }
-.requisites-action--primary { color: #ffffff; background: #741b75; }
+.requisites-action--primary { color: #ffffff; background: #741b75; cursor: pointer; }
 .requisites-action--secondary { border: 1.5px solid #a32a8d; color: #a32a8d; background: transparent; }
 .requisites-action--primary:hover { background: #8a218b; box-shadow: 0 8px 18px rgb(116 27 117 / 20%); transform: translateY(-2px); }
 .requisites-action--secondary:hover { border-color: #741b75; color: #741b75; background: #a32a8d0d; transform: translateY(-2px); }
+.requisites-action--primary.is-copied { background: #25744f; box-shadow: 0 8px 18px rgb(37 116 79 / 20%); }
 
 .account-documents { display: flex; justify-content: center; padding: 88px 32px; background: #ffffff; }
 .account-documents__inner { display: flex; flex-direction: column; width: 1200px; max-width: 100%; gap: 40px; }
