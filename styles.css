@@ -4117,16 +4117,14 @@ a {
 .requisite button svg,
 .edo-field button svg,
 .requisites-action svg { width: 18px; height: 18px; fill: none; stroke: currentcolor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+.requisite button svg,
+.edo-field button svg { width: 16px; height: 16px; stroke-width: 2; }
 .requisite button:not(.is-copied) svg,
-.edo-field button:not(.is-copied) svg { display: none; }
+.edo-field button:not(.is-copied) svg,
+.requisites-action--primary svg { display: none; }
 .requisite button:not(.is-copied)::before,
-.requisite button:not(.is-copied)::after,
 .edo-field button:not(.is-copied)::before,
-.edo-field button:not(.is-copied)::after { position: absolute; box-sizing: border-box; width: 11px; height: 11px; border: 1.7px solid currentcolor; border-radius: 2px; content: ""; }
-.requisite button:not(.is-copied)::before,
-.edo-field button:not(.is-copied)::before { top: 8px; left: 8px; }
-.requisite button:not(.is-copied)::after,
-.edo-field button:not(.is-copied)::after { top: 12px; left: 12px; background: inherit; }
+.requisites-action--primary::before { display: block; width: 16px; height: 16px; background: currentcolor; content: ""; -webkit-mask: url("assets/images/icon-copy.svg") center / contain no-repeat; mask: url("assets/images/icon-copy.svg") center / contain no-repeat; }
 .requisite button.is-copied svg,
 .edo-field button.is-copied svg { display: none; }
 .requisite button.is-copied::after,
