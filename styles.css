@@ -227,7 +227,7 @@
 }
 
 .site-footer__identity > a:not(.site-footer__logo):hover {
-  color: var(--color-hover-surface);
+  color: var(--color-hover-text);
 }
 
 .site-footer__nav {
@@ -268,7 +268,7 @@
 }
 
 .site-footer__nav a:hover {
-  color: var(--color-hover-surface);
+  color: var(--color-hover-text);
 }
 
 .site-footer__contacts {
@@ -324,7 +324,7 @@
 }
 
 .site-footer__contacts > a:not(.site-footer__button):hover {
-  color: var(--color-hover-surface);
+  color: var(--color-hover-text);
 }
 
 .site-footer__button + a:not(.site-footer__button) {
@@ -377,7 +377,7 @@
 }
 
 .site-footer__social > a:hover {
-  color: var(--color-hover-surface);
+  color: var(--color-hover-text);
 }
 
 .site-footer__social > div a:nth-child(1),
@@ -511,7 +511,7 @@
 :root {
   --color-primary: #741b75;
   --color-hover-surface: #68186a;
-  --color-hover-text: #5f1660;
+  --color-hover-text: #a32a8d;
   --color-background: #ffffff;
   --color-border: #e6e0ec;
   --color-text: #2b1b3d;
@@ -646,7 +646,7 @@ a {
 
 .site-nav__link:hover,
 .site-nav__link:focus-visible {
-  color: var(--color-hover-surface);
+  color: var(--color-hover-text);
   outline: none;
 }
 
@@ -1923,7 +1923,7 @@ a {
 
 .reviews__tab:hover,
 .reviews__tab:focus-visible {
-  color: var(--color-hover-surface);
+  color: var(--color-hover-text);
 }
 
 .reviews__tab::after {
@@ -2120,14 +2120,14 @@ a {
 
 .faq__question:hover,
 .faq__question:focus-visible {
-  color: var(--color-hover-surface);
+  color: var(--color-hover-text);
 }
 
 .faq__question:hover i::before,
 .faq__question:hover i::after,
 .faq__question:focus-visible i::before,
 .faq__question:focus-visible i::after {
-  background: var(--color-hover-surface);
+  background: var(--color-hover-text);
 }
 
 .faq__question span {

@@ -76,10 +76,10 @@ sed -n '/^\.service-card.is-active {/,/^}/p' styles.css | grep -q 'border-color:
 ! sed -n '/:hover/,/^}/p' styles.css | grep -Eq 'transform: translate[XY]\('
 grep -q '^\.reviews__tab:hover' styles.css
 grep -q '^\.faq__question:hover' styles.css
-sed -n '/^\.site-nav__link:hover,/,/^}/p' styles.css | grep -q 'color: var(--color-hover-surface)'
-sed -n '/^\.reviews__tab:hover,/,/^}/p' styles.css | grep -q 'color: var(--color-hover-surface)'
-sed -n '/^\.faq__question:hover,/,/^}/p' styles.css | grep -q 'color: var(--color-hover-surface)'
-sed -n '/^\.site-footer__nav a:hover,/,/^}/p' styles.css | grep -q 'color: var(--color-hover-surface)'
+sed -n '/^\.site-nav__link:hover,/,/^}/p' styles.css | grep -q 'color: var(--color-hover-text)'
+sed -n '/^\.reviews__tab:hover,/,/^}/p' styles.css | grep -q 'color: var(--color-hover-text)'
+sed -n '/^\.faq__question:hover,/,/^}/p' styles.css | grep -q 'color: var(--color-hover-text)'
+sed -n '/^\.site-footer__nav a:hover,/,/^}/p' styles.css | grep -q 'color: var(--color-hover-text)'
 grep -q "event.preventDefault();" script.js
 grep -q "setActiveServiceCard(card);" script.js
 grep -q "scrollIntoView({ behavior: 'smooth', block: 'start' })" script.js
