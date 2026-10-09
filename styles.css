@@ -198,12 +198,7 @@
 }
 
 .site-footer__logo:hover img {
-  filter: brightness(0) invert(1);
-}
-
-.site-footer__logo:hover {
-  background: var(--color-hover-surface);
-  border-radius: var(--radius-md);
+  filter: brightness(0.88);
 }
 
 .site-footer__identity strong {
@@ -232,8 +227,7 @@
 }
 
 .site-footer__identity > a:not(.site-footer__logo):hover {
-  color: #ffffff;
-  background: var(--color-hover-surface);
+  color: var(--color-hover-surface);
 }
 
 .site-footer__nav {
@@ -274,8 +268,7 @@
 }
 
 .site-footer__nav a:hover {
-  color: #ffffff;
-  background: var(--color-hover-surface);
+  color: var(--color-hover-surface);
 }
 
 .site-footer__contacts {
@@ -331,8 +324,7 @@
 }
 
 .site-footer__contacts > a:not(.site-footer__button):hover {
-  color: #ffffff;
-  background: var(--color-hover-surface);
+  color: var(--color-hover-surface);
 }
 
 .site-footer__button + a:not(.site-footer__button) {
@@ -376,8 +368,7 @@
 }
 
 .site-footer__social > div a:hover {
-  background: var(--color-hover-surface);
-  filter: brightness(0) invert(1);
+  filter: brightness(0.88);
 }
 
 .site-footer__social > a {
@@ -386,8 +377,7 @@
 }
 
 .site-footer__social > a:hover {
-  color: #ffffff;
-  background: var(--color-hover-surface);
+  color: var(--color-hover-surface);
 }
 
 .site-footer__social > div a:nth-child(1),
@@ -656,8 +646,7 @@ a {
 
 .site-nav__link:hover,
 .site-nav__link:focus-visible {
-  color: #ffffff;
-  background: var(--color-hover-surface);
+  color: var(--color-hover-surface);
   outline: none;
 }
 
@@ -1934,8 +1923,7 @@ a {
 
 .reviews__tab:hover,
 .reviews__tab:focus-visible {
-  color: #ffffff;
-  background: var(--color-hover-surface);
+  color: var(--color-hover-surface);
 }
 
 .reviews__tab::after {
@@ -2132,15 +2120,14 @@ a {
 
 .faq__question:hover,
 .faq__question:focus-visible {
-  color: #ffffff;
-  background: var(--color-hover-surface);
+  color: var(--color-hover-surface);
 }
 
 .faq__question:hover i::before,
 .faq__question:hover i::after,
 .faq__question:focus-visible i::before,
 .faq__question:focus-visible i::after {
-  background: #ffffff;
+  background: var(--color-hover-surface);
 }
 
 .faq__question span {
@@ -3430,11 +3417,6 @@ a {
   .reviews__tab.is-active {
     color: #ffffff;
     background: #a32a8d;
-  }
-
-  .reviews__tab.is-active:hover,
-  .reviews__tab.is-active:focus-visible {
-    background: var(--color-hover-surface);
   }
 
   .reviews__frame {
