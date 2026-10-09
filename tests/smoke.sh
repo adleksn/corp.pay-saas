@@ -70,6 +70,13 @@ grep -q 'setupScrollDots' script.js
 grep -q '^\.service-card.is-active' styles.css
 grep -q '^\.services__dots' styles.css
 sed -n '/^\.service-card.is-active {/,/^}/p' styles.css | grep -q 'box-shadow: 0 6px 18px rgb(163 42 141 / 10%)'
+! sed -n '/^\.service-card.is-active {/,/^}/p' styles.css | grep -q 'padding:'
+sed -n '/^\.service-card.is-active {/,/^}/p' styles.css | grep -q 'border-color: #a32a8d'
+! sed -n '/^\.service-card.is-active {/,/^}/p' styles.css | grep -q 'border: 2px'
+! sed -n '/:hover/,/^}/p' styles.css | grep -Eq 'transform: translate[XY]\('
+grep -q "event.preventDefault();" script.js
+grep -q "setActiveServiceCard(card);" script.js
+grep -q "scrollIntoView({ behavior: 'smooth', block: 'start' })" script.js
 grep -q 'id="service-payments"' index.html
 grep -q 'Зарубежные сервисы и подписки' index.html
 grep -q 'Комиссия снижается с ежемесячным объёмом' index.html

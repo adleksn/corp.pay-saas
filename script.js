@@ -182,6 +182,14 @@ serviceCards.forEach((card) => {
     setActiveServiceCard(card);
   });
 
+  card.querySelector('.service-card__more')?.addEventListener('click', (event) => {
+    event.preventDefault();
+    setActiveServiceCard(card);
+
+    const target = document.querySelector(event.currentTarget.getAttribute('href'));
+    target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
   card.addEventListener('keydown', (event) => {
     if (event.key !== 'Enter' && event.key !== ' ') {
       return;
