@@ -74,6 +74,12 @@ sed -n '/^\.service-card.is-active {/,/^}/p' styles.css | grep -q 'box-shadow: 0
 sed -n '/^\.service-card.is-active {/,/^}/p' styles.css | grep -q 'border-color: #a32a8d'
 ! sed -n '/^\.service-card.is-active {/,/^}/p' styles.css | grep -q 'border: 2px'
 ! sed -n '/:hover/,/^}/p' styles.css | grep -Eq 'transform: translate[XY]\('
+grep -q '^\.reviews__tab:hover' styles.css
+grep -q '^\.faq__question:hover' styles.css
+sed -n '/^\.site-nav__link:hover,/,/^}/p' styles.css | grep -q 'background: var(--color-hover-surface)'
+sed -n '/^\.reviews__tab:hover,/,/^}/p' styles.css | grep -q 'background: var(--color-hover-surface)'
+sed -n '/^\.faq__question:hover,/,/^}/p' styles.css | grep -q 'background: var(--color-hover-surface)'
+sed -n '/^\.site-footer__nav a:hover,/,/^}/p' styles.css | grep -q 'background: var(--color-hover-surface)'
 grep -q "event.preventDefault();" script.js
 grep -q "setActiveServiceCard(card);" script.js
 grep -q "scrollIntoView({ behavior: 'smooth', block: 'start' })" script.js

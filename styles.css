@@ -194,10 +194,16 @@
   width: 170px;
   height: 75px;
   cursor: pointer;
+  transition: background-color var(--transition-base);
 }
 
 .site-footer__logo:hover img {
-  filter: brightness(1.06);
+  filter: brightness(0) invert(1);
+}
+
+.site-footer__logo:hover {
+  background: var(--color-hover-surface);
+  border-radius: var(--radius-md);
 }
 
 .site-footer__identity strong {
@@ -222,11 +228,12 @@
   height: 42px;
   color: #731a75;
   line-height: 2.67;
-  transition: color var(--transition-base);
+  transition: color var(--transition-base), background-color var(--transition-base);
 }
 
 .site-footer__identity > a:not(.site-footer__logo):hover {
-  color: var(--color-hover-text);
+  color: #ffffff;
+  background: var(--color-hover-surface);
 }
 
 .site-footer__nav {
@@ -263,11 +270,12 @@
   font-weight: 600;
   line-height: 1.25;
   white-space: nowrap;
-  transition: color var(--transition-base);
+  transition: color var(--transition-base), background-color var(--transition-base);
 }
 
 .site-footer__nav a:hover {
-  color: var(--color-hover-text);
+  color: #ffffff;
+  background: var(--color-hover-surface);
 }
 
 .site-footer__contacts {
@@ -319,11 +327,12 @@
   font-size: 14px;
   text-align: center;
   white-space: nowrap;
-  transition: color var(--transition-base);
+  transition: color var(--transition-base), background-color var(--transition-base);
 }
 
 .site-footer__contacts > a:not(.site-footer__button):hover {
-  color: var(--color-hover-text);
+  color: #ffffff;
+  background: var(--color-hover-surface);
 }
 
 .site-footer__button + a:not(.site-footer__button) {
@@ -362,11 +371,23 @@
   justify-content: center;
   width: 33px;
   height: 33px;
-  transition: filter var(--transition-base);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-base), filter var(--transition-base);
 }
 
 .site-footer__social > div a:hover {
-  filter: brightness(1.08);
+  background: var(--color-hover-surface);
+  filter: brightness(0) invert(1);
+}
+
+.site-footer__social > a {
+  border-radius: var(--radius-md);
+  transition: color var(--transition-base), background-color var(--transition-base);
+}
+
+.site-footer__social > a:hover {
+  color: #ffffff;
+  background: var(--color-hover-surface);
 }
 
 .site-footer__social > div a:nth-child(1),
@@ -635,7 +656,8 @@ a {
 
 .site-nav__link:hover,
 .site-nav__link:focus-visible {
-  color: var(--color-hover-text);
+  color: #ffffff;
+  background: var(--color-hover-surface);
   outline: none;
 }
 
@@ -1907,6 +1929,13 @@ a {
   white-space: nowrap;
   cursor: pointer;
   background: transparent;
+  transition: color var(--transition-base), background-color var(--transition-base);
+}
+
+.reviews__tab:hover,
+.reviews__tab:focus-visible {
+  color: #ffffff;
+  background: var(--color-hover-surface);
 }
 
 .reviews__tab::after {
@@ -2097,6 +2126,21 @@ a {
   text-align: left;
   cursor: pointer;
   background: transparent;
+  border-radius: var(--radius-md);
+  transition: color var(--transition-base), background-color var(--transition-base);
+}
+
+.faq__question:hover,
+.faq__question:focus-visible {
+  color: #ffffff;
+  background: var(--color-hover-surface);
+}
+
+.faq__question:hover i::before,
+.faq__question:hover i::after,
+.faq__question:focus-visible i::before,
+.faq__question:focus-visible i::after {
+  background: #ffffff;
 }
 
 .faq__question span {
@@ -3386,6 +3430,11 @@ a {
   .reviews__tab.is-active {
     color: #ffffff;
     background: #a32a8d;
+  }
+
+  .reviews__tab.is-active:hover,
+  .reviews__tab.is-active:focus-visible {
+    background: var(--color-hover-surface);
   }
 
   .reviews__frame {
